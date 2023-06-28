@@ -176,6 +176,6 @@ The Company Maintenance screen is used to add at least one company record before
 
 1. Select option 7 (Company) from the A/P File Maintenance screen. The Company Maintenance (Change) screen appears.
 
-    ![Alt text](AP_CompanyMaintenance.png)
+    ![Alt text](images/AP_CompanyMaintenance.png)
 
 2. If necessary, enter ? for the Company (3,a) field and press \<Enter> to display a list of the previously added company records on the Company Selection screen.
