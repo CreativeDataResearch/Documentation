@@ -99,7 +99,7 @@ Refer to Working With Company A/P Options for additional information.
 
 The various G/L account numbers which are debited when invoice batches are posted are designated by a user-named field (see below) of the A/P item records. Refer to Working With A/P Item Records for additional information.
 
-![Alt text](AP_ItemInquiry.png)
+![Alt text](images/AP_ItemInquiry.png)
 
 >Note: The specific name of this A/P item record field is designated by the value of the **Account header** field (see below) of a company’s G/L options. Refer to Working With Company G/L Options for additional information.
 
