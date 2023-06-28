@@ -7,6 +7,7 @@ Before “getting started” with DAC Accounts Payable (A/P) System, users shoul
 After selecting option 11 (Accounts Payable) of the DAC Main Operations Menu screen, the Accounts Payable screen appears.
 
 ![Alt text](images/AP_APMenu.png)
+
 Users can press \<F3> to redisplay the Main Operations Menu screen.
 
 Refer to the Accounts Payable Quick Reference Guide for an overview of the use of the Accounts Payable System.
