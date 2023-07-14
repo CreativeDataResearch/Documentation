@@ -170,7 +170,7 @@ After selecting option 20 (A/P File Maint.) from the Accounts Payable screen, th
 
 ## Working With Company Records
 
-The Company Maintenance screen is used to add at least one company record before the Accounts Payable System is used. Multiple companies must be set up if users track retained earnings or net profit and loss for more than one entity, such as multiple warehouses or divisions. Refer to Working With Company G/L Options for additional information.
+The Company Maintenance screen is used to add at least one company record before the Accounts Payable System is used. Multiple companies must be set up if users track retained earnings or net profit and loss for more than one entity, such as multiple warehouses or divisions. Refer to [Working With Company G/L Options](#working-with-company-g/l-options) for additional information.
 
 ![Alt text](../../images/AP_APFileMaintenance.png)
 
@@ -228,9 +228,348 @@ Refer to [Selecting The Default Company](#selecting-the-default-company) for inf
 ### Selecting An Alternative Company
 
 After a user signs on, the Select Alternative Company application can be used to work with a company other than the user’s default company.\
+
 Refer to Selecting The Default Company for information about using the Select Default Company application to resume working with the default company when  work with an alternative company is complete.
 
 1. Select option 6 (Select Alternative Company) from the A/P File Maintenance screen. The Select Alternative Company screen appears.
 2. Enter 1 (Select) in the selection column next to the company code of the desired company, and press \<Enter>. The Your current company code is now \### message appears designating the alternative company selected.
+3. Press \<F3> to exit. The A/P File Maintenance screen appears.
 
 ### Selecting The Default Company
+
+After working with an alternative company, the Select Default Company application is used to resume working with the user’s default company. Refer to Working With User Profile Records for information about designating each user’s default company.
+
+Select option 7 (Select Default Company) from the Accounts Payable screen. The The default company has been selected message appears.
+
+## Working With Company A/P Options
+
+After company records are added, the values of several A/P options must be designated for each company.
+
+If necessary, the Select Alternative Company application can be used before working with company A/P options to allow the user to work with a company other than the user’s default company. Refer to Selecting An Alternative Company for additional information.
+
+1. Select option 7 (Company) from the A/P File Maintenance screen. The Company Maintenance screen appears.
+2. Enter the company code of the desired company and press \<Enter>, or enter ? for the Company field and press \<Enter> to select a company from the Company Selection screen.
+3. Press \<F16> (\<Shift> plus \<F4>). The Company Maintenance (A/P) screen appears.
+4. Enter one of the following values for the A/P aging method field:\
+  
+     - I designates that A/P aging is based on the invoice date. For example, if an invoice is dated November 1 with 30-day terms, the invoice is considered 1 day past due on December 2.
+     - D designates that A/P aging is based on the invoice due date. For example, if the due date is November 1 with 30-day terms, the invoice is considered 31 days past due on December 2.
+     - P designates that A/P aging is based on the posting date. For example, if the posting date is November 1 with 30-day terms, the invoice is considered 31 days past due on December 2.
+
+    The aging method is used to produce the A/P cash forecast report (entitled Vendor Aging Summary), and used to calculate the aging figures which appear on the Vendor Account Inquiry (Display) screen.
+5. Enter the number of days past the date on which an invoice no longer has a remaining balance for the **Days to hold closed A/P** (3,n) field. The recommended value is 30. It designates how long invoice records and payment records remain in the A/P current files. After this time elapses, the records are automatically saved in A/P history files when the Month End Close application is used.
+6. Enter data for the following fields as necessary:
+    - **A/P aging bucket 1 name** - a description of the first aging bucket, such as Current.
+    - **A/P aging bucket 1 days** - the number of days which an invoice cannot exceed to be included in the first bucket.
+    - Optional: **A/P aging bucket 2 name** - a description of the second aging bucket, such as 31 to 60.
+    - Optional: **A/P aging bucket 2 days** - the number of days which an invoice cannot exceed to be included in the second bucket.
+    - Optional: **A/P aging bucket 3 name** - a description of the third aging bucket, such as 61 to 90.
+    - Optional: **A/P aging bucket 3 days** - the number of days which an invoice cannot exceed to be included in the third bucket.
+    - Optional: **A/P aging bucket 4 name** - a description of the fourth aging bucket, such as 91 - 120.
+    - Optional: **A/P aging bucket 4 days** - the number of days which an invoice cannot exceed to be included in the fourth bucket. Note: When using the Vendor Account Inquiry application to display four columns of aging figures, the amount calculate for the fourth bucket is combined with the fifth bucket, and displayed in the far right column of the screen.
+    - Optional: **A/P aging bucket 5 name** - a description of the fifth aging bucket, such as 121+.
+    - Optional: **A/P aging bucket 5 days** - enter 999 for the number of days which an invoice cannot exceed to be included in the fifth bucket. Note: When using the Vendor Account Inquiry application to display four columns of aging figures, the amount calculate for the fifth bucket is combined with the fourth bucket, and displayed in the far right column of the screen.
+The values of the A/P aging fields are used to produce the A/P cash forecast report (entitled Vendor Aging Summary), and used to calculate the aging figures which appear on the Vendor Account Inquiry (Display) screen.
+7. Enter Y (yes) for the **Allow discount override** field to enable the user to changethe values of the **Discount** and fields of the A/P Invoice Posting (Add) and (Change) screens, and the **Discount** field of the Payment Detail Maintenance screen. Refer to Adding An Invoice Batch, Adding A Payment Batch, Working With Manual Payments, and Working With EFT Payments for additional information.
+8. Enter Y (yes) for the **Allow detail payment change** field to enable changing the amount of a payment when selecting invoices for payment.
+9. Enter *1* for the **Number of leader checks** field to designate that the first check loaded in the printer is used when checks are printed. If a single check is “wasted” every time checks are printed, enter *2* for this field. If the first two checks are not used every time checks are printed, enter *3* for this field.
+10. Enter one of the following values for the Inv jrnl entry method field:
+
+    - *B* designates that a single credit journal entry is created in General Ledger for the entire batch when an invoice batch is posted in Accounts Payable. Refer to Adding An Invoice Batch for information about using the Posting date field to post entries to the General Ledger.
+    - *I* designates that a credit journal entry is created in General Ledger for each invoice when an invoice batch is posted. Refer to Adding An Invoice Batch for information about using the Inv date field to post entries to the General Ledger.
+
+11. Enter one of the following values for the Pmt jrnl entry method field:
+    - *B* designates that a single debit journal entry is created in General Ledger for the entire batch when a payment batch is posted in Accounts Payable.
+    - *C* designates that a debit journal entry is created in General Ledger for each payment when a payment batch is posted.\
+
+    Refer to Working With A/P Options for information about using the A/P Check field to designate which date is used for posting entries to the General Ledger.
+
+12. Optional: Enter *Y* (yes) for the Reprint check numbers on preprinted checks field to print check numbers on checks that are pre-numbered, and verify that the correct check is being printed on the correct form.
+13. If *Y* (yes) is entered for the G/L interface field of the company’s record, data may be entered for the following fields:
+    - **A/P account number** - the cost center number and the liability account number which are credited when invoices are posted and debited when payments are made. Refer to Posting An Invoice Batch and Printing Checks And Check Register for additional information. The cost center number entered for the **A/P account number** field is also used as the default value when adding recurring invoice records and adding invoice batches. Refer to Working With Recurring Invoice Records and Adding An Invoice Batch for additional information.
+    - **Discount account** - the cost center number and the expense or income account number used for crediting discounts when payments are made.
+
+    Refer to Working With Company Records for additional information about the **G/L interface** field. Refer also to Working With A/P Item Records for information about the **G/L Account** # field, and to Working With Bank Records for information about the **Cost Center** and **G/L Account** # fields.
+
+14. Press \<Enter> when data entry is complete. The *Record added* message appears at the bottom of the Company Maintenance screen.
+15. Press \<F3> to exit. The A/P File Maintenance screen appears.
+
+### Working With Company G/L Options
+
+### Working With Period Date Records
+
+### Working With Bank Records
+
+### Working With Terms Records
+
+### Working With Vendor Records
+
+#### Vendor Record Worksheet
+
+### Working with A/P Item Records
+
+### Working with A/P Options
+
+### Working With Recurring Invoice Records
+
+## Working With Vendor Invoices
+
+### Adding An Invoice Batch
+
+#### Calculating An A/P Allowance
+
+#### Printing Multiple Refrence Lines
+
+### Editing An Invoice Batch
+
+#### Invoice Entry Edit List
+
+### Adding A Credit Memo
+
+### Posting An Invoice Batch
+
+#### A/P-G/L Trans Register
+
+#### Invoice Entry Edit List
+
+#### A/P Invoice Transaction Register
+
+### Adjusting A Posted Invoice
+
+#### A/P Debit/Credit G/L Journal Register
+
+## Working With Payments
+
+### Adding A Payment Batch
+
+#### Reconciling Pay Dates And Periods
+
+### Editing A Voucher
+
+### Editing A Payment Batch
+
+#### A/P Payment Edit List
+
+### Accepting A Payment Batch
+
+#### A.P Payment Check Date Edit Report
+
+### Deleting An Accepted Payment Batch
+
+#### A/P Payment Edit List
+
+## Working With Printed Checks
+
+### Printing Checks And Check Register
+
+#### A/P Check Register
+
+### Printing The A/P Payment Transaction Register
+
+#### A/P Pay-G/L Trans Reg
+
+### Reprinting All Checks
+
+### Reprinting Selected Checks
+
+### Voiding Payments
+
+#### A/P Check Void Reverse Register
+
+#### Voided Check Report
+
+### Vouding Blank Checks
+
+### Printing The Negative Check Report
+
+#### A/P Vouchers Not Selected (Negatives)
+
+#### A/P Neg. Checks Not Sel By Pay Date
+
+### Reconciling Checks And EFT Payments
+
+#### Selected Records Chg Back To Printed
+
+#### Reconciled Check Report
+
+## Working With Manual Payments
+
+### Automatically Posting Manual Payments
+
+#### Invoice Entry Edit List
+
+#### A/P Invoice Transaction Register
+
+#### A/P-G/L Trans Register
+
+#### A/P Manual Check Register
+
+#### A/P Pay-G/L Trans Reg
+
+### Processing Manual Payments After Invoices Are Posted
+
+#### A/P Manual Check Register
+
+#### A/P Pay-G/L Trans Reg
+
+## Working With EFT Payments
+
+### Automatically Posting EFT Payments
+
+#### Invoice Entry Edit List
+
+#### A/P Invoice Transaction Register
+
+#### A/P-G/L Trans Register
+
+#### A/P EFT Check Register
+
+#### A/P Pay-G/L Trans Reg
+
+### Processing EFT Payments After Posting Invoices
+
+#### A/P EFT Check Registe
+
+#### A/P Pay-G/L Trans Reg
+
+### Processing EFT Payments After Invoices Are Posted
+
+## Working With Accounts Payable Inquiry
+
+### Working With Invoice Voucher Inquiry
+
+#### Displaying Invoice Detail
+
+#### Displaying Payment Detail
+
+### Working With Vendor Account Inquiry
+
+### Working With Vendor Account Inquiry History
+
+### Working With Vendor Inquiry
+
+#### Displaying Vendor Records By Alpha Code
+
+#### Displaying Vendor Records By Vendor Code
+
+### Displaying Company Records
+
+### Displaying User Profile Records
+
+### Displaying Company A/P And G/L Options
+
+### Displaying Period Date Records
+
+### Displaying Calendar Records
+
+### Displaying Period Status Records
+
+### Displaying Bank Records
+
+### Displaying Terms Records
+
+### Displaying A/P Item Records
+
+## Working With Accounts Payable Reports
+
+### Printing A Cash Requirements Report
+
+#### A/P Cash Requirements Report By Pay Date and Vendor
+
+#### A/P Cash Requirements Report By Batch
+
+### Printing A Cash Forecast Report
+
+#### Vendor Aging Summary
+
+#### A/P Cash Forecast Report
+
+### Printing An Open Credits Report
+
+#### A/P Open Credits
+
+### Printing An Invoice Journal Report
+
+#### A/P Invoice Journal
+
+#### Invoice Journal By Post Date
+
+### Printing A Payment Journal Report
+
+#### A/P Payment Journal
+
+#### A/P Payments By Vendor
+
+### Printing An Invoice/Voucher List
+
+#### A/P Payment Edit
+
+#### A/P Payment Edit-Alpha
+
+### Printing A Tobacco Invoice Report
+
+#### Tobacco Invoice Report
+
+### Printing An Outstanding Checks Report
+
+#### A/P Outstanding Check Reconciliation
+
+#### A/P Check Reconciliation Report (EFT's only)
+
+#### Outstanding Chk Rpt (Excluding EFTs)
+
+## Printing A Recurring Invoice List
+
+### Recurring Invoice List
+
+### Printing A Vendor History Report
+
+#### Vendor History Report - Summary Version
+
+#### Vendor History Report - Detail Version
+
+### Printing A Vendor 1099 Report
+
+#### A/P Vendor 1099 Report
+
+### Printing Vendor Address Labels
+
+### Printing Vendor Lists
+
+#### Vendor List By Code
+
+#### Vendor List By Alpha Code
+
+#### Vendor List By Type
+
+#### Vendor List By Amount Due
+
+### Printing Vendor File Labels
+
+### Printing A Bank List
+
+#### Bank List
+
+### Printing A Terms List
+
+#### Vendor Terms List
+
+### Printing An A/P Items List
+
+#### Item List
+
+## Working With Closing Applications
+
+### Saving Accounts Payable Data To Tape
+
+### Printing Accounts Payable Monthly Reports
+
+#### Accounts Payable Monthly Report
+
+#### Accounts Payable Monthly Report By Vendor
+
+### Closing A Month
+
+#### A/P Month End Close Report
+
+## Closing A Year
