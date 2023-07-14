@@ -141,7 +141,7 @@ When payments are processed, a single credit journal entry is created in G/L (fo
 
 Refer to Working With Company A/P Options for information about the:
 
-- **Pmt jrnl entry method** field which is used to designate if a single debit journal entry is created for each payment of a batch, or for the entire batch when printing checks. 
+- **Pmt jrnl entry method** field which is used to designate if a single debit journal entry is created for each payment of a batch, or for the entire batch when printing checks.
         >Note: A single debit journal entry is created for each manual check and each EFT processed.
 
 - Dates used for debit and credit journal entries when processing payments.
@@ -282,7 +282,7 @@ The values of the A/P aging fields are used to produce the A/P cash forecast rep
     - *B* designates that a single debit journal entry is created in General Ledger for the entire batch when a payment batch is posted in Accounts Payable.
     - *C* designates that a debit journal entry is created in General Ledger for each payment when a payment batch is posted.\
 
-    Refer to Working With A/P Options for information about using the A/P Check field to designate which date is used for posting entries to the General Ledger.
+    Refer to [Working With A/P Options](#working-with-ap-options) for information about using the A/P Check field to designate which date is used for posting entries to the General Ledger.
 
 12. Optional: Enter *Y* (yes) for the Reprint check numbers on preprinted checks field to print check numbers on checks that are pre-numbered, and verify that the correct check is being printed on the correct form.
 13. If *Y* (yes) is entered for the G/L interface field of the company’s record, data may be entered for the following fields:
