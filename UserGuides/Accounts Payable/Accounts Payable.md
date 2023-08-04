@@ -22,7 +22,7 @@ The steps below are followed to create the necessary records before the Accounts
 
 - The cost center number(s) and General Ledger account numbers are combined using the Work With Cost Center application.
 
-Note: The General Ledger System is used by selecting option 22 (General Ledger) of the Accounts Payable screen, or by selecting option 12 (General Ledger) of the DAC Main Operations Menu screen.
+>Note: The General Ledger System is used by selecting option 22 (General Ledger) of the Accounts Payable screen, or by selecting option 12 (General Ledger) of the DAC Main Operations Menu screen.
 
 **Step 1**: Use the Work With System Options application to make any necessary
 changes to the value of the default system option record fields related to Accounts
