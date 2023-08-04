@@ -2,7 +2,7 @@
 
 Before “getting started” with DAC Accounts Payable (A/P) System, users should refer to the Introduction of the Getting Started document for information about DAC data, screens and menus.
 
-![Alt text](../../images/AP_APMenu.png)
+![Alt text](../../images/AP_mainmenu.png)
 
 After selecting option 11 (Accounts Payable) of the DAC Main Operations Menu screen, the Accounts Payable screen appears.
 
@@ -24,44 +24,24 @@ The steps below are followed to create the necessary records before the Accounts
 
 >Note: The General Ledger System is used by selecting option 22 (General Ledger) of the Accounts Payable screen, or by selecting option 12 (General Ledger) of the DAC Main Operations Menu screen.
 
-**Step 1**: Use the Work With System Options application to make any necessary
-changes to the value of the default system option record fields related to Accounts
-Payable. Refer to the DAC Default System Options document for information about
-the A/P Interface Active? and A/P Terms Positions Used fields of the SYS005
-default system option, and the Accounts Payable Active? field of the SYS015 default
-system option.
+**Step 1**: Use the Work With System Options application to make any necessary changes to the value of the default system option record fields related to Accounts Payable. Refer to the DAC Default System Options document for information about the A/P Interface Active? and A/P Terms Positions Used fields of the SYS005 default system option, and the Accounts Payable Active? field of the SYS015 default system option.
 
-**Step 2**: Use the Company Maintenance screens to add preliminary data, such as
-name and address, of the company. Multiple companies must be set up if users track
-retained earnings or net profit and loss for more than one entity, such as multiple
-warehouses or divisions. Refer to Working With Company Records for additional
-information. Note: This step is not necessary if the company records were previously
-added using the General Ledger System.
+**Step 2**: Use the Company Maintenance screens to add preliminary data, such as name and address, of the company. Multiple companies must be set up if users track retained earnings or net profit and loss for more than one entity, such as multiple warehouses or divisions. Refer to Working With Company Records for additional information.
+>Note: This step is not necessary if the company records were previously added using the General Ledger System.
 
-**Step 3**: Use the User Profile Maintenance screen to designate the names of A/P
-users, and with which company each user works. Refer to Working With User Profile
-Records for additional information. Note: This step is not necessary if the user profile
-records were previously added using the General Ledger System.
+**Step 3**: Use the User Profile Maintenance screen to designate the names of A/P users, and with which company each user works. Refer to Working With User Profile Records for additional information. >Note: This step is not necessary if the user profile records were previously added using the General Ledger System.
 
 **Step 4**: Sign off the DAC system, then sign back on.
 
-**Step 5**: Use the Company Maintenance (A/P) screen to add company A/P data,
-such as the aging method used by a company. Refer to Working With Company A/P
-Options for additional information.
+**Step 5**: Use the Company Maintenance (A/P) screen to add company A/P data, such as the aging method used by a company. Refer to Working With Company A/POptions for additional information.
 
-**Step 6**: Use the Company Maintenance (G/L) screen to add company G/L data if
-General Ledger account numbers are used. Refer to Working With Company G/L
-Options for additional information. Note: This step is not necessary if the company
-G/L options were previously added using the General Ledger System.
+**Step 6**: Use the Company Maintenance (G/L) screen to add company G/L data if General Ledger account numbers are used. Refer to Working With Company G/L Options for additional information.
+>Note: This step is not necessary if the company G/L options were previously added using the General Ledger System.
 
-**Step 7**: Use the Period Date Maintenance screen to add period date data. Refer to
-Working With Period Date Records for additional information. Note: This step is not
-necessary if the period date records were previously added using the General Ledger
-System
+**Step 7**: Use the Period Date Maintenance screen to add period date data. Refer to [Working With Period Date Records](#working-with-period-date-records) for additional information.
+>Note: This step is not necessary if the period date records were previously added using the General Ledger System
 
-**Step 8**: Use the Period Date Inquiry screen to verify the starting and ending dates of
-the periods (also referred to as months) of the user’s fiscal year. Refer to Displaying
-Period Date Records for additional information.
+**Step 8**: Use the Period Date Inquiry screen to verify the starting and ending dates of the periods (also referred to as months) of the user’s fiscal year. Refer to Displaying Period Date Records for additional information.
 
 **Step 9**: Use the Period Status Inquiry screen to verify the A/P open status for the periods of the user’s fiscal year. Refer to Displaying Period Status Records for additional information.
 
@@ -71,20 +51,16 @@ Period Date Records for additional information.
 
 **Step 12**: Use the Vendor Terms Maintenance screen to add terms data. Refer to Working With Terms Records for additional information.
 
-**Step 13**: Use the Vendor Maintenance screen to add vendor data. Refer to Working
-With Vendor Records for additional information.
+**Step 13**: Use the Vendor Maintenance screen to add vendor data. Refer to Working With Vendor Records for additional information.
 
-**Step 14**: Use the Item Maintenance screen to add A/P item data. Refer to Working
-With A/P Item Records for additional information.
+**Step 14**: Use the Item Maintenance screen to add A/P item data. Refer to Working With A/P Item Records for additional information.
 
-**Step 15**: Use the Work With A/P Options screen to designate various defaults
-(company, terms, bank and pay date) and A/P related options. Refer to Working With
-A/P Options for additional information.
+**Step 15**: Use the Work With A/P Options screen to designate various defaults (company, terms, bank and pay date) and A/P related options. Refer to Working With A/P Options for additional information.
 
-**Step 16**: Use the Vendor Maintenance screen to add data concerning recurring payments. Refer to Working With Recurring Invoice Records for additional information.
+**Step 16**: Use the Vendor Maintenance screen to add data concerning recurring payments. Refer to [Working With Recurring Invoice Records](#working-with-recurring-invoice-records) for additional information.
 >Note: The Special Item application (option 4 of the A/P File Maintenance screen) and Entity application (option 10 of the A/P File Maintenance screen) are no longer used due to system upgrades.
 
-Refer to the Accounts Payable Quick Reference Guide for an overview of the use of the Accounts Payable System
+Refer to the [Accounts Payable Quick Reference Guide](/Quick%20Reference%20Guide/Accounts%20Payable%20Quick%20Reference%20Guide.md) for an overview of the use of the Accounts Payable System
 
 ## Accounts Payable and General Ledger Account Numbers
 
@@ -139,7 +115,7 @@ Refer to Working With Company A/P Options for additional information.
 
 When payments are processed, a single credit journal entry is created in G/L (for both the cash account number and the discount number) for each individual payment (printed check, manually-written check and EFT transaction).
 
-Refer to Working With Company A/P Options for information about the:
+Refer to [Working With Company A/P Options](#working-with-ap-options) for information about the:
 
 - **Pmt jrnl entry method** field which is used to designate if a single debit journal entry is created for each payment of a batch, or for the entire batch when printing checks.
         >Note: A single debit journal entry is created for each manual check and each EFT processed.
@@ -170,7 +146,7 @@ After selecting option 20 (A/P File Maint.) from the Accounts Payable screen, th
 
 ## Working With Company Records
 
-The Company Maintenance screen is used to add at least one company record before the Accounts Payable System is used. Multiple companies must be set up if users track retained earnings or net profit and loss for more than one entity, such as multiple warehouses or divisions. Refer to [Working With Company G/L Options](#working-with-company-g/l-options) for additional information.
+The Company Maintenance screen is used to add at least one company record before the Accounts Payable System is used. Multiple companies must be set up if users track retained earnings or net profit and loss for more than one entity, such as multiple warehouses or divisions. Refer to [Working With Company G/L Options](#working-with-company-gl-options) for additional information.
 
 ![Alt text](../../images/AP_APFileMaintenance.png)
 
@@ -229,7 +205,7 @@ Refer to [Selecting The Default Company](#selecting-the-default-company) for inf
 
 After a user signs on, the Select Alternative Company application can be used to work with a company other than the user’s default company.\
 
-Refer to Selecting The Default Company for information about using the Select Default Company application to resume working with the default company when  work with an alternative company is complete.
+Refer to [Selecting The Default Company](#selecting-the-default-company) for information about using the Select Default Company application to resume working with the default company when  work with an alternative company is complete.
 
 1. Select option 6 (Select Alternative Company) from the A/P File Maintenance screen. The Select Alternative Company screen appears.
 2. Enter 1 (Select) in the selection column next to the company code of the desired company, and press \<Enter>. The Your current company code is now \### message appears designating the alternative company selected.
@@ -237,7 +213,7 @@ Refer to Selecting The Default Company for information about using the Select De
 
 ### Selecting The Default Company
 
-After working with an alternative company, the Select Default Company application is used to resume working with the user’s default company. Refer to Working With User Profile Records for information about designating each user’s default company.
+After working with an alternative company, the Select Default Company application is used to resume working with the user’s default company. Refer to [Working With User Profile Records](#working-with-user-profile-records) for information about designating each user’s default company.
 
 Select option 7 (Select Default Company) from the Accounts Payable screen. The The default company has been selected message appears.
 
@@ -245,7 +221,7 @@ Select option 7 (Select Default Company) from the Accounts Payable screen. The T
 
 After company records are added, the values of several A/P options must be designated for each company.
 
-If necessary, the Select Alternative Company application can be used before working with company A/P options to allow the user to work with a company other than the user’s default company. Refer to Selecting An Alternative Company for additional information.
+If necessary, the Select Alternative Company application can be used before working with company A/P options to allow the user to work with a company other than the user’s default company. Refer to [Selecting An Alternative Company](#selecting-an-alternative-company) for additional information.
 
 1. Select option 7 (Company) from the A/P File Maintenance screen. The Company Maintenance screen appears.
 2. Enter the company code of the desired company and press \<Enter>, or enter ? for the Company field and press \<Enter> to select a company from the Company Selection screen.
@@ -295,6 +271,14 @@ The values of the A/P aging fields are used to produce the A/P cash forecast rep
 15. Press \<F3> to exit. The A/P File Maintenance screen appears.
 
 ### Working With Company G/L Options
+
+After company records are added, the values of several G/L options must be designated for each company if G/L account numbers are used. If necessary, the Select Alternative Company application can be used before working with company G/L options to allow the user to work with a company other than the user’s default company. Refer to Selecting An Alternative Company for additional information.
+
+1. Select option 7 (Company) from the A/P File Maintenance screen. The Company Maintenance screen appears.
+
+2. Enter the company code of the desired company and press \<Enter>, or enter ? for the Company (3,a) field and press \<Enter> to select a company from the Company Selection screen.
+3. Press \<F15> (G/L). The Company Maintenance (G/L) screen appears.
+
 
 ### Working With Period Date Records
 
