@@ -2,11 +2,11 @@
 
 Before “getting started” with DAC Accounts Payable (A/P) System, users should refer to the Introduction of the Getting Started document for information about DAC data, screens and menus.
 
-![Alt text](../../images/AP_mainmenu.png)
+![Alt text](/images/AP_mainmenu.png)
 
 After selecting option 11 (Accounts Payable) of the DAC Main Operations Menu screen, the Accounts Payable screen appears.
 
-![Alt text](../../images/AP_APMenu.png)
+![Alt text](/images/AP_APMenu.png)
 
 Users can press \<F3> to redisplay the Main Operations Menu screen.
 
@@ -279,6 +279,25 @@ After company records are added, the values of several G/L options must be desig
 2. Enter the company code of the desired company and press \<Enter>, or enter ? for the Company (3,a) field and press \<Enter> to select a company from the Company Selection screen.
 3. Press \<F15> (G/L). The Company Maintenance (G/L) screen appears.
 
+    If the value of the **Company** field is changed (as illustrated above), the Select Alternative Company application must be used before continuing to work with the Company Maintenance (G/L) screen. In this case, press \<F3> to exit, and refer toSelecting An Alternative Company for additional information.
+
+    If the value of the Company field is unchanged (as illustrated above), continue with the steps below to enter values for the fields of the Company Maintenance (G/L) screen.
+
+4. Enter the text designating the company’s cost centers, such as *Cost Center*, for  the **Cost cntr hdr** (12,a) field. This text will appear as a field name on various  A/P System screens (see the Bank Maintenance screen below), and as a column  heading on various A/P System reports. Refer to the example of the A/P-G/L  Transaction Register in the Posting An Invoice Batch section of this document.
+  
+5. Enter the text designating the company’s General Ledger account numbers, such  as G/L Account #, for the **Account header** (15,a) field. This text will appear as  a field name on various A/P System screens (see the Bank Maintenance screen  below), and as a column heading on various A/P System reports. Refer to the  example of the A/P Invoice Transaction Register in the Posting An Invoice Batch  section of this document.
+
+6. Enter data for the following fields:
+
+- Optional: **Suspense cost center/account** - the cost center number (3+4,n) and  the account number (5+4,n) used for the suspense total.
+- Optional: **Ret. earnings cost cntr/account** - the cost center number (3+4,n)  and the account number (5+4,n) used for the retained earnings total.
+- Optional: **Profit/loss cost cntr/account** - the cost center number (3+4,n) and  the account number (5+4,n) used for the net profit/loss total.
+
+7. Press \<Enter> when data entry is complete. The *Record added* message appears at  the bottom of the Company Maintenance screen.
+
+8. Press \<F3> to exit. The A/P File Maintenance screen appears.
+
+In the example below, the field names **Cost Center** and **G/L Account #** appear on the Bank Maintenance screen because the values Cost Center and G/L Account # are entered for the **Cost cntr hdr** and **Account header** fields of the Company Maintenance (G/L) screen.
 
 ### Working With Period Date Records
 
