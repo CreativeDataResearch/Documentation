@@ -10,7 +10,7 @@ After selecting option 11 (Accounts Payable) of the DAC Main Operations Menu scr
 
 Users can press \<F3> to redisplay the Main Operations Menu screen.
 
-Refer to the [Accounts Payable Quick Reference Guide](<../../Quick Reference Guide/Accounts Payable Quick Reference Guide.md>) for an overview of the use of the Accounts Payable System.
+Refer to the [Accounts Payable Quick Reference Guide](<../DAC Refrence Guides/Accounts Payable QRG.md>) for an overview of the use of the Accounts Payable System.
 
 For information about transferring purchase orders to Accounts Payable, and the report which is printed when transfers occur, refer to Transferring Purchase Orders To Accounts Payable of the Purchasing document.
 
