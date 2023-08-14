@@ -367,8 +367,7 @@ Note: The Cost Center and G/L Account # field names will be different if other v
 
     Refer to [Printing Checks And Check Register](#printing-checks-and-check-register) for additional information.
 
-8. Press \<Enter> when data entry is complete. The Record added message appears at 
-the bottom of the Bank Maintenance screen.
+8. Press \<Enter> when data entry is complete. The Record added message appears at the bottom of the Bank Maintenance screen.
 
 9. Press \<F3> to exit. The A/P File Maintenance screen appears.
 
@@ -381,61 +380,402 @@ Refer to the DAC Default System Options document for information about the **A/P
 1. Select option 5 (Terms) from the A/P File Maintenance screen. The Vendor Terms Maintenance screen appears without values for any of the fields if no terms records have been previously added using Accounts Payable. If necessary, press \<F9> (Go to 'Add' mode).
 
 2. Enter data for the following fields as necessary:
-    - Terms code (2,a) - a 2-digit code to designate the type of the payment terms, such as 20 for net due in 20 days. The value entered for this field must duplicate the value entered for the Terms Code field of the corresponding record added for the Purchasing System’s vendor records.
-    - Terms code Description (25,a) - a description of the payment terms. The value entered for this field should duplicate the value entered for the Terms Code Description field of the corresponding record added with the Terms Definitions application.
-    - Optional: Pmt due days (3,n) - the number of days in which payment must be received by the vendor before an invoice is considered past due. This value is added to the vendor’s invoice date to calculate the payment due date. If a value is not entered for this field, a value must be entered for the Pmt due dte field (see below).
-The value entered for the Pmt due days field should duplicate the value 
-entered for the Age Days field of the corresponding record added for the 
-Purchasing System’s vendor records.
-• Optional: Disc due days (3,n) - the number of days in which payment must be 
-received by the vendor before the distributor qualifies for a cash discount. This 
-value is added to the vendor’s invoice date to calculate the discount due date. 
-Refer to Working With A/P Options for information about using the Take 
-A/P Disc If Past Due Date field to pay discounted payment amounts when 
-invoices are past due.
-To designate the discount due date as a specific day of each month, do not 
-enter a value for the Disc due days field, and enter a value for the Disc due 
-dte field (see below).
-The value entered for the Disc due days field should duplicate the value 
-entered for the Disc Days field of the corresponding record added for the 
-Purchasing System’s vendor records.
-• Optional: Terms discount percent (5.2,n) - the discount percentage received 
-from the vendor is used to calculate the discounted payment amount by 
-multiplying the percentage by the amount due for only the items of vendor’s 
-invoice which can be discounted. Refer to Working With A/P Item Records for 
-information about the Discount Allowed field.
-The value entered for the Terms discount percent field should duplicate the 
-value entered for the Cash Disc. % field of the corresponding record added 
-for the Purchasing System’s vendor records.
-• Optional: Pmt due dte (4,n) - the payment due date designated as a specific 
-day of each month. The valid values are 9901 through 9931 (for the 1st 
-through the 31st). Note: The 99 digits of these values are not related in any 
-way to the year 1999.
-If a value is not entered for the Pmt due dte field, a value must be entered for 
-the Pmt due days field (see above).
-Accounts Payable (Rev. 7/09/13) 39
-• Optional: Disc due dte (4,n) - the discount due date designated as a specific 
-day of each month. The valid values are 9901 through 9931 (for the 1st 
-through the 31st). Note: The 99 digits of these values are not related in any 
-way to the year 1999.
-To calculate the discount due date using a specific number of days, do not 
-enter a value for the Disc due dte field, and enter a value for the Disc due 
-days field (see above).
-• Optional: EFT Sts (1,a) - enter Y (yes) to designate that the default value of an 
-invoice’s payment type is E for electronic file transfer (EFT) payment.
-3. Press <Enter> when data entry is complete.
-4. Press <F3> to exit. The A/P File Maintenance screen appears.
-After the payment terms records are created, they are linked to vendor records 
-by entering the value of the Terms code field of a terms record for the value of a 
-A/P vendor record’s Terms code field. Refer to Working With Vendor Records for 
-additional information.
+    - **Terms code** (2,a) - a 2-digit code to designate the type of the payment terms, such as 20 for net due in 20 days. The value entered for this field must duplicate the value entered for the Terms Code field of the corresponding record added for the Purchasing System’s vendor records.
+    - **Terms code Description** (25,a) - a description of the payment terms. The value entered for this field should duplicate the value entered for the **Terms Code Description** field of the corresponding record added with the Terms Definitions application.
+    - Optional: **Pmt due days** (3,n) - the number of days in which payment must be received by the vendor before an invoice is considered past due. This value is added to the vendor’s invoice date to calculate the payment due date. If a value is not entered for this field, a value must be entered for the Pmt due dte field (see below).
+
+        The value entered for the Pmt due days field should duplicate the value entered for the Age Days field of the corresponding record added for the Purchasing System’s vendor records.
+
+    - Optional: **Disc due days** (3,n) - the number of days in which payment must be received by the vendor before the distributor qualifies for a cash discount. This value is added to the vendor’s invoice date to calculate the discount due date. Refer to Working With A/P Options for information about using the Take A/P Disc If Past Due Date field to pay discounted payment amounts when invoices are past due.
+
+        To designate the discount due date as a specific day of each month, do not enter a value for the **Disc due days** field, and enter a value for the **Disc due dte** field (see below).
+
+        The value entered for the Disc due days field should duplicate the value entered for the Disc Days field of the corresponding record added for the Purchasing System’s vendor records.
+
+    - Optional: Terms discount percent (5.2,n) - the discount percentage received from the vendor is used to calculate the discounted payment amount by multiplying the percentage by the amount due for only the items of vendor’s invoice which can be discounted. Refer to Working With A/P Item Records for information about the Discount Allowed field.
+
+        The value entered for the Terms discount percent field should duplicate the value entered for the Cash Disc. % field of the corresponding record added for the Purchasing System’s vendor records.
+
+    - Optional: Pmt due dte (4,n) - the payment due date designated as a specific day of each month. The valid values are 9901 through 9931 (for the 1st through the 31st). Note: The 99 digits of these values are not related in any way to the year 1999.
+
+        If a value is not entered for the **Pmt due dte** field, a value must be entered for the **Pmt due days** field (see above).
+
+    - Optional: Disc due dte (4,n) - the discount due date designated as a specific day of each month. The valid values are 9901 through 9931 (for the 1st through the 31st). Note: The 99 digits of these values are not related in any way to the year 1999.
+
+        To calculate the discount due date using a specific number of days, do not enter a value for the Disc due dte field, and enter a value for the Disc due days field (see above).
+
+    - Optional: EFT Sts (1,a) - enter Y (yes) to designate that the default value of an invoice’s payment type is E for electronic file transfer (EFT) payment.
+
+3. Press \<Enter> when data entry is complete.
+
+4. Press \<F3> to exit. The A/P File Maintenance screen appears.
+
+After the payment terms records are created, they are linked to vendor records by entering the value of the Terms code field of a terms record for the value of a A/P vendor record’s Terms code field. Refer to Working With Vendor Records for additional information.
+
 ### Working With Vendor Records
 
+After the terms records are added, the Vendor Maintenance and Vendor Maintenance Details screens are used to add vendor records.
+
+If vendor records were previously created by using the Work With Vendors application of the Purchasing System, the Refresh Vendors From Dac application (option 17 of the A/P File Maintenance screen) can be used *one time* to initially copy those records to create the A/P vendor records. After using the Refresh Vendors From Dac application, users must edit the new A/P vendor records to enter data for the fields which are noted in the instructions below.
+
+If necessary, CDR support personnel can include a function with the End Of Day (EOD) processing application which creates new A/P vendor records by copying only the Purchasing System vendor records added since EOD was last executed. Users would edit these new A/P vendor records also, as noted in the instructions.
+
+The instructions given below, which describe adding and deleting a vendor record, can also be followed to edit a record.
+
+1. Select option 1 (Vendor) from the A/P File Maintenance screen. The Vendor Maintenance screen appears with vendor records if any have been previously added.
+
+    During the course of adding a vendor record, the following options can be used:
+
+    - *2=Change* - the Vendor Maintenance screen appears. The user can edit a vendor record by changing the values of the Vendor Maintenance screen, and pressing \<Enter> to change the values of the Vendor Maintenance Details screen. Refer to the following instructions for additional information about the field of these screens.
+
+    - *5=Inquiry* - the Vendor Inquiry screen appears. The user can review but not change the vendor information that appears on this screen. Refer to Working With Vendor Inquiry for additional information.
+
+    - *7=Recurring invoices* - the Recurring Invoice Maintenance screen appears. Refer to Working With Recurring Invoice Records for additional information.
+
+    - *N=Notes* - the Entity Notes Maint (A/P) screen appears which can be used to log miscellaneous information about a vendor.
+
+2. Press \<F6> (Add new vendor). The Vendor Maintenance KEY SCREEN screen appears.
+
+3. Enter a vendor code for the **Vendor** (6,a) field. The value of the **Vendor** field can be used to print a list of vendors. Refer to [Working With Accounts Payable Reports](#working-with-accounts-payable-reports) for additional information.
+
+4. Press \<Enter>. The Vendor Maintenance screen appears.
+
+5. To add a vendor record, enter data for the following fields, as necessary:
+    - **Name** (30,a) - the vendor’s name. Refer to Working With Accounts Payable Reports for information about printing vendor file labels.
+    - **Address line 1** (30,a) - first line of vendor’s address. Refer to Working With Accounts Payable Reports for information about printing vendor address labels.
+    - Optional:  **Address line 2** (30,a) - second line of vendor’s address.
+    - **City** (20,a) - the city of the vendor’s mailing address.
+    - **State** (2,a) - the state abbreviation of the vendor’s mailing address.
+    - **Postal code** (5-9,n) - the zip code and 4-digit extension of the vendor’s mailing address. If the vendor record was copied from the Purchasing System’s vendor record, the 4-digit extension does not appear, and must be entered by the A/P user.
+    - Optional: **Phone number** (10,n) - the vendor’s area code and telephone number.
+    - Optional: **Fax number** (10,n) - the vendor’s area code and telephone number for fax transmission.
+    - Optional: **Alpha code** (15,a) - text used to alphabetically display and select vendors on screens. It can also be used for sorting vendors when printing a vendor list. Refer to Adjusting A Posted Invoice, Working With Vendor Account Inquiry, Working With Vendor Account Inquiry History, Working With Vendor Alpha Inquiry and Printing Vendor Lists for additional information.  
+    The last name and first name, such as *EARNHARDT DALE*, could be used for an individual. The significant part of a company’s name, such as *HOME DEPOT* for The Home Depot, could be used.
+
+6. Press \<Enter>. The Vendor Maintenance Details screen appears.
+
+7. To delete the vendor record, press \<F11> (Delete). The *Record changed* message appears at the bottom of the Vendor Maintenance KEY SCREEN screen. The user can press \<F3> to exit, or continue adding (or deleting) vendor records.
+
+8. To continue adding the vendor record, enter data for the following fields of the Vendor Maintenance Details screen:
+
+    - Optional:  **Contact name** (30,a) - the name of the vendor employee with whom the user primarily communicates.
+    - Optional:  **Corporate vendor** (6,a) - a vendor code previously defined by the user to designate an associated vendor. If necessary, enter ? and press \<Enter> to select a vendor code from the Vendor Select screen. This field is not required for using DAC directly, but provided for the informational purposes of the user. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
+    - Optional:  **Remit-to vendor** (6,a) - a vendor code previously defined by the user to designate the business or individual to whom payments will be made. If necessary, enter ? and press \<Enter> to select a vendor code from the Vendor Select screen. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
+
+    - Optional: **Type code** (2,a) - a code which is not previously defined by the user, and not associated with a DAC master file. The value of the **Type code** field can be used to print a list of vendors. Refer to Working With Accounts Payable Reports for additional information. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
+
+    - **Bank code** (6,a) - a bank code previously defined by the user with the Bank Maintenance screen. If necessary, enter ? and press \<Enter> to select a bank code from the Bank Selection screen. If the vendor record was copied from the Purchasing System’s vendor record, the value of this field will default from the Default bank code field of the General A/P Options Details screen. Refer to Working With A/P Options for additional information.
+
+    - **Terms code** (2,a) - a terms code previously defined by the user with the Terms Code Maintenance screen. If necessary, enter ? and press \<Enter> to select a terms code from the Vendor Terms Select screen. If the vendor record was copied from the Purchasing System’s vendor record, the value of this field will default from the **Default terms code** field of the General A/P Options Details screen. Refer to Working With A/P Options for additional information.
+
+    - Optional:  **1099 code** (6,a) - text printed on the A/P Vendor 1099 Report. Refer to Printing A Vendor 1099 Report for additional information. If the **1099 code** field is left blank, the vendor will not be included on the report. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
+
+    - Optional:  **Tax ID** (11,a) - the vendor’s federal tax identification number which appears on the Vendor 1099 Report. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
+
+    - **Allow payment** (1,a) - the default value of Y (yes) designates that the vendor’s invoices are not withheld when select invoices for payment. Refer to Editing A Payment Batch for additional information. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
+
+    - **Critical payment** (1,a) - the default value of N (no) designates that payments to the vendor need not be made in a timely manner. Enter Y (yes) to designate otherwise. This field is not required for using DAC directly, but provided for the informational purposes of the user. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
+
+    - Optional:  **Minimum order value** (11.2,n) - designates the minimum dollar value which must be purchased from the vendor. This field is not required for using DAC directly, but provided for the informational purposes of the user. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary. 
+    > Note: If a value is entered for the **Minimum order value** field, a higher value must be entered for the **Maximum order value field** (see below).
+
+    - Optional: **Maximum order value** (11.2,n) - designates the maximum dollar value which can be purchased from the vendor. This field is not required for using DAC directly, but provided for the informational purposes of the user. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
+
+    > Note: A value must be entered for the **Maximum order value** field if a value is entered for the **Minimum order value** field (see above).
+9. Press \<Enter> when data entry is complete. The Vendor Maintenance KEY SCREEN screen appears with the *Record added* message.
+
+10. Press \<F3> to exit. The Vendor Maintenance screen appears.
+
 #### Vendor Record Worksheet
+**Vendor Maintenance KEY SCREEN and Vendor Maintenance screens**
+
+**Vendor***(6,a) _____________________
+
+**Name***(30,a) ______________________
+
+Address line 1*(30,a) ______________________
+
+Address line 2*(30,a) ______________________
+
+**City***(20,a) ______________________ State*(2,a) ______________________
+
+**Postal code***(5-9,n) ______________________
+
+Phone number*(10,n) ______________________ 
+
+Fax number*(10,n) ______________________
+
+Alpha code (15,a) ______________________
+
+(Vendor Maintenance Details screen)
+
+Contact name* (30,a) ______________________
+
+Corporate vendor (6,a) ___________________
+
+Remit-to vendor (6,a) ___________________
+
+Type code (2,a) __________
+
+**Bank code** (6,a) ___________________
+
+Terms Code*(2,a) __________
+
+1099 code (6,a) ___________________
+
+Tax ID (11,a) ________________________________
+
+**Allow payment** (1,a) ______
+
+**Critical payment** (1,a) ______
+
+Minimum order value (11.2,n) ___________________
+
+Maximum order value (11.2,n) ___________________
+
+> Note: Data entry is strongly recommended, or required by the system, for the fields displayed in bold type above.
+The data entered for the fields marked above with an asterisk (*) is copied from the Purchasing System vendor's record.
 
 ### Working with A/P Item Records
 
+After the vendor records are added, the Item Maintenance Details screen is used to add Accounts Payable (A/P) item records. The instructions given below, which describe adding and deleting an A/P item record, can also be followed to edit a record.
+
+Accounts Payable item records are used to link A/P transactions with General Ledger (G/L) account numbers; therefore, an A/P item record must be created for each G/L account number that will be debited during invoice posting.
+
+If DAC Purchasing System is used, A/P item records must be created to link purchasing transactions with the appropriate G/L account number.
+
+If any PO off invoice deduction (5) type of vendor deal is used, the *VRDEAL5* A/P item record must be added. If any item allow-OI deduction (4) type of vendor deal is used, the *VRDEAL4* A/P item record must be added.
+
+Refer to [Working With Accounts Payable Reports](#working-with-accounts-payable-reports) for information about printing a list of A/P item records.
+
+1. Select option 3 (Item) from the A/P File Maintenance screen. The Item Maintenance screen appears with A/P item records if any have been previously added.
+
+    During the course of adding an A/P item record, the following options can be used:
+    - *2=Change* - the Item Maintenance Details screen appears. The user can edit an A/P item record by changing the values of the screen’s fields. Refer to the following instructions for additional information about these fields.
+    - *5=Inquiry* - the Item Inquiry screen appears. The user can review but not change the A/P item information that appears on this screen. Refer to Working With Item Inquiry for additional information.
+
+2. Press \<F6> (Add new item). The Item Maintenance KEY SCREEN screen appears.
+
+3. Enter an item code for the **Item code** (15,a) field. To add an A/P item record for each of the G/L accounts that will be debited during invoice posting, users may enter the chart of account numbers for the **Item code** field. For example, if 890 is the G/L account number for bank charges, 890 would be entered for the **Item code** field of the corresponding A/P item record.
+
+    To add an A/P item record for transferring purchase orders to Accounts Payable, enter INVENTORY and an item category number for the Item code field. Valid values are INVENTORY01 through INVENTORY99.
+    >Note: Though an A/P item record should be added for every item category number used by the distributor, a single A/P item record can be added by using the value of INVENTORY without a category number for the Item code field.
+
+    To use any PO off invoice deduction (5) type of vendor deal, enter VRDEAL5 for the Item code field. To use any item allow-OI deduction (4) type of vendor deal, enter VRDEAL4 for the Item code field. Refer to Adding PO Off Invoice Deduction Deals and Adding Item Allow-OI Deduction Deals of the Vendor Receivables document for additional information.  
+
+    The value of the Item code field is also used to designate a tobacco product when printing the Tobacco Invoice Report. Refer to Working With Accounts Payable Reports for additional information.  
+
+    Refer to Printing An Accounts Payable Item List to review examples of A/P item records.
+
+4. Press \<Enter>. The Item Maintenance Details screen appears.  
+    >Note: **The G/L Account** # field name will be different if another value is entered for the **Account header** field of the Company Maintenance (G/L) screen. Refer to Working With Company G/L Options for additional information.
+
+5. To delete the A/P item record, press \<F11> (Delete). The Item Maintenance screen appears without the deleted A/P item record.
+
+6. To continue adding the A/P item record, enter data for the following fields of the Item Maintenance Details screen:
+    - **Description** (30,a) - the description of the item. If necessary, the user can override this value when it appears during invoice entry.
+    - **Discount allowed** (1,a) - the default value of Y (yes) designates that a discount can be taken on the item. If necessary, the user can override this value when it appears during invoice entry.
+    - Optional:  **Actual cost** (7.2,n) - this field is left blank.
+    - Optional:  **List price** (7.2,n) - this field is left blank.
+    - **G/L Account** # (5+4,n) - the account number that is debited in General Ledger when invoices are posted. Refer to Working With Company A/P Options for information about the **A/P account number** field.  
+
+    To add an A/P item record for transferring purchase orders to Accounts Payable, enter an account number for the **G/L Account** # field. If necessary, the user can override this value when it appears during invoice entry.
+
+7. Press \<Enter> when data entry is complete. The Record added message appears at the bottom of the Item Maintenance KEY SCREEN screen.
+
+8. Press \<F3> to exit. The Item Maintenance screen appears
+
 ### Working with A/P Options
+
+The step-by-step instructions which follow describe using the General A/P Options Details screen to designate various A/P defaults options. *After the A/P System operation is begun, these options should not be changed without first consulting CDR support personnel, and using extreme caution.*
+
+Refer to the DAC Default System Options document for information about the A/P related fields of the SYS005 Accounting options.
+
+1. Select option 16 (A/P Options) from the A/P File Maintenance screen. The Work With A/P Options screen appears.  
+
+2. Enter  2 (Edit Record) in the selection column next to AP0001 (General A/P Options 1), and press \<Enter>. The General A/P Options Details screen appears.
+
+3. Enter a company code for the **Default Company Number** (3,a) field. The default company code is used if purchase orders are transferred to A/P. Refer to Transferring Purchase Orders to Accounts Payable of the Purchasing document for additional information. The default company code is also used if vendor records are copied from Purchasing. Refer to Working With Vendor Records for additional information.  
+
+    If necessary, press \<F4> to select a default company code from the Company Selection screen. If \<F4> is used, enter N (no) for the Confirm field of the General A/P Options Details screen to continue entering values.
+
+4. Enter a terms code for the **Default Terms Code** (2,a) field. The default terms code is used if no payment terms is available for a vendor’s invoice when purchase orders are transferred to A/P. Refer to Transferring Purchase Orders to Accounts Payable of the Purchasing document for additional information. The default terms code is also used if vendor records are copied from Purchasing. Refer to Working 
+With Vendor Records for additional information.
+
+5. Enter a bank code for the **Default Bank Code** (6,a) field. The default bank code is used for processing payments, and is also used if vendor records are copied from Purchasing.
+
+6. Enter one of the following values for the Default Pay Date From (1,a) field to designate which date is used by default as an invoice’s pay date if the pay date is not entered when the invoice is created (or transferred from Purchasing):
+
+    - 1 - the invoice’s due date is used for the pay date.
+    - 2 - if a discount date is calculated for the invoice, it is used for the pay date; otherwise the invoice’s due date is used for the pay date.
+
+        Refer to the following sections for additional information about the fields used to calculate the due date and discount date:
+    - Working With Terms Records for information about **Pmt due days**, **Pmt due dte**, **Disc due days** and **Disc due dte** fields.
+
+    - Adding An Invoice Batch for information about the Inv date and Due date fields.
+    - Transferring Purchase Orders to Accounts Payable of the Purchasing document for information about the Invoice Date, Due and Pay fields of the Prompt Header Information screen.
+
+7. Enter one of the following values for the Take Disc If Past Due Dte (1,a) field to designate if a discounted payment amount is paid to vendors:
+    - 1 - discounted payment amounts are not paid to vendors when invoices are past due.
+    - 2 - discounted payment amounts are paid to vendors when invoices are past due. Refer to Working With Terms Records for information about the Terms discount percent field.
+
+8. Enter one of the following values for the **A/P Check Date**(2,a) field. With the exception described in the note below, the value of the A/P Check Date field designates 1) which date is used for posting entries to the General Ledger, 2) which date is printed on checks, and 3) how many checks are printed per vendor:
+
+    - BP - the value entered for the Check date field when printing checks is used 
+for posting payments to the payment journal, and is printed on checks. Refer 
+to Printing Checks And Check Register for information about the Check date 
+field of the A/P Check Print Prompt screen. 
+
+        If BP is entered for the A/P Check Date field, the default value of the A/P Check Version field on the A/P Check Print Prompt screen is 1 which designates that one check is printed per vendor. Refer to Printing Checks And Check Register for information about the A/P Check Version field. When printing checks, users can change the default value of the A/P Check Version field to 2 which designates that one check is printed for each voucher of each vendor. Note: If 2 is entered for the A/P Check Version field, multiple reference lines cannot be printed on a check stub. Refer to Printing Multiple 
+Reference Lines for additional information.
+•  PD - the value of the Pay Date field is used for posting payments to the 
+payment journal, and is printed on checks. Refer to Adding A Payment Batch 
+for information about the Pay Date field of the A/P Payment Selection screen. 
+Refer also to Adding An Invoice Batch for information about the Pay date 
+field of the A/P Invoice Posting (Add) screen. If PD is entered for the A/P Check Date field, the default value of the 
+A/P Check Version field is 3 on the A/P Check Print Prompt screen which 
+designates that one check will be printed per vendor per pay date. Refer to 
+A c c o u n t s   P a y a b l e   ( R e v.   7 / 0 9 / 1 3 )                                                                                                         5 4 
+Printing Checks And Check Register for information about the A/P Check 
+Version field.  Note: The value of the Pay Date field is used for posting payments to the 
+payment journal, regardless of the value entered for the A/P Check Date field, 
+when payments are made with either hand-written checks or electronic funds 
+transfers (EFTs). Refer to Working With Manual Payments and Working With 
+EFT Payments for information about the Check date and Selection Date fields, 
+respectively. 9.  If using General Ledger custom reports, 22 can be entered for the G/L Custom 
+Report Heading (2,a) field to print one or two additional lines of text with the 
+report headings. Refer to Working With G/L Report Records of the General 
+Ledger document for information about using the 1 and 2 fields of the G/L Report 
+Maintenance screen when defining a custom report. If the G/L Custom Report 
+Heading field is left blank, or 11 is entered, the report heading will include the 
+company name, but not the additional text.  10.  Enter  *YES for the Restrict AP Batch To User (6,a) field if purchase orders are 
+transferred to Accounts Payable. A DAC/CV1 Object Lock message appears if 
+others are using Accounts Payable at the time a user attempts to transfer purchase 
+orders. Refer to Transferring Purchase Orders to Accounts Payable of the 
+Purchasing document for additional information. 11.  If multiple cost centers exist, enter a cost center number for the Default Cost 
+Center (3,n) field. Contact CDR support personnel for additional information.  12.  Enter  *YES for the Condensed Written Chk V3 (6,a) field if PD is entered 
+for the A/P Check Date field above, and additional space is needed to print the 
+written amount on checks. 13.  Enter the device name of the user’s tape drive for the Device Name (EOY 
+Backup) (30,a) field. The data files of the DACACTDATA library are 
+automatically saved to a tape cartridge during General Ledger end of year 
+processing. 14.  Press <Enter> when data entry is complete.
+A c c o u n t s   P a y a b l e   ( R e v.   7 / 0 9 / 1 3 )                                                                                                         5 5   15.  Press <Enter> when prompted to confirm. The Work With A/P Options screen 
+appears.  16.  Enter  2 (Edit Record) in the selection column next to AP0002 (A/P System 
+Options 1), and press <Enter>. The General A/P Options Details screen appears.  17.  Enter  YES for the A/P Auto Tape Recon (3,a) field if monthly reconciliation 
+with the bank is handled electronically. Contact CDR personnel for additional 
+information.
+SYW5E1R    CHANGE  CDR Customer Conference                   4/30/12 16:25:29
+                               General A/P Options Details                   
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+        A/P Auto Tape Recon.           ___                                   
+        Print A/P Remittance Rpt       __                                    
+        Use Alt. A/P Check Ver. 1      ______                                
+        GL Act# on AP Chk Reg-Y/N      _                                     
+        A/P Laser Check?(No/1/2)       _                                     
+        Use GL hdr desc 2 for dtl      _                                     
+                                             
+        Print Invoice Entry Edit?      ______                                
+        Fiscal Year? (YES/NO)                                                
+        Allow Auto EFT & Man Chks      ______                                
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+F3=Exit                                                                      
+SYW4DFR    DISPLAY CDR Customer Conference                   4/30/12 15:30:37
+                                  Work with A/P Options                      
+A/P Option  Key Text                                                         
+Key                                                                          
+______      ______________________________                  
+Type option and press enter:  2=Edit Record                                  
+                                                                             
+?  A/P Options  Key Text                                                     
+   Key                                                                       
+_  AP0001       General A/P OPtions 1                                        
+_  AP0002       A/P System Options 1                                         
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+F3=Exit   F5=Impose A/P Options                                              
+SYW5E1R    CHANGE  CDR Customer Conference                   4/30/12 16:38:54 
+                               General A/P Options Details                    
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+        Default Company Number         001                                    
+        Default Terms Code             10                                     
+        Default Bank Code              CHECK                                  
+        Default Pay Date From....      2                                      
+        Take Disc If Past Due Dte      2                                      
+        A/P Check Date (PD,BP)         BP                                     
+        G/L Custom Report Heading      11                                     
+        Restrict AP Batch To User      *YES                                   
+        Default Cost Center                                                   
+        Condensed Written Chk V3       *NO                                    
+        Device Name (EOY Backup)       TAP01                                     
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+F3=Exit                                                                       
+                                                              CONFIRM: Y (Y/N)
+A c c o u n t s   P a y a b l e   ( R e v.   7 / 0 9 / 1 3 )                                                                                                         5 6   18.  Enter  Y for the Print A/P Remittance Rpt (1,a) field to print a remittance report, 
+similar to a check stub, for EFT payments.  19.  Enter  Y (yes) for the GL Act# on AP Chk Reg-Y/N (1,a) field to designate that 
+the account numbers which are debited in the General Ledger (when posting 
+invoices) are printed on the check register. Refer to Working With A/P Item 
+Records for information about the G/L Acct Number field which is used to 
+designate these account numbers. 20.  If A/P laser printer checks are used, enter one of the following values for the 
+A/P Laser Check?(No/1/2) (1,a) field to designate the type of printer used. If 
+the continous form check is used, enter N (no). Refer to the A/P Check Forms 
+document for additional information.
+•  1 - a printer with IPDS (intelligent printer data stream) capability is used for 
+printing the checks.
+•  2 - a printer without IPDS capability is used for printing the checks.  21.  Enter  Y (yes) for the Use GL hdr desc 2 for dtl (1,a) field to designate that text 
+entered for the Desc 2 field of the Journal Entry screen is printed as the journl 
+entry’s detail information; otherwise, the account name/description from the chart 
+of account is used.  22.  Enter  *YES for the Print Invoice Entry Edit (6,a) field to designate that the 
+Invoice Entry Edit List is automatically printed when an A/P invoice batch is 
+posted.  23.  Enter  *YES for the Allow Auto EFT & Man Chks (6,a) field to designate 
+that EFT and manual check payments can be automatically posted when users 
+enter vendor invoices. Refer to Automatically Posting Manual Payments and 
+Automatically Posting EFT Payments for additional information. 24.  Press <Enter>.  25.  Press <Enter> when prompted to confirm. The Work With A/P Options  screen 
+appears.
+SYW5E1R    CHANGE  CDR Customer Conference                   5/01/12 16:24:59 
+                               General A/P Options Details                    
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+        A/P Auto Tape Recon.           TC                                     
+        Print A/P Remittance Rpt                                              
+        Use Alt. A/P Check Ver. 1      *NO                                    
+        GL Act# on AP Chk Reg-Y/N      Y                                      
+        A/P Laser Check?(No/1/2)       1                                      
+        Use GL hdr desc 2 for dtl      N                                      
+                                                                              
+        Print Invoice Entry Edit?                                             
+        Fiscal Year? (YES/NO)                                                 
+        Allow Auto EFT & Man Chks      *YES                                   
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+F3=Exit                                                                       
 
 ### Working With Recurring Invoice Records
 
