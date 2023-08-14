@@ -258,7 +258,7 @@ The values of the A/P aging fields are used to produce the A/P cash forecast rep
     - *B* designates that a single debit journal entry is created in General Ledger for the entire batch when a payment batch is posted in Accounts Payable.
     - *C* designates that a debit journal entry is created in General Ledger for each payment when a payment batch is posted.\
 
-    Refer to [Working With A/P Options](#working-with-ap-options) for information about using the A/P Check field to designate which date is used for posting entries to the General Ledger.
+    Refer to [Working With A/P Options](#working-with-company-ap-options) for information about using the A/P Check field to designate which date is used for posting entries to the General Ledger.
 
 12. Optional: Enter *Y* (yes) for the Reprint check numbers on preprinted checks field to print check numbers on checks that are pre-numbered, and verify that the correct check is being printed on the correct form.
 13. If *Y* (yes) is entered for the G/L interface field of the company’s record, data may be entered for the following fields:
@@ -301,10 +301,134 @@ In the example below, the field names **Cost Center** and **G/L Account #** appe
 
 ### Working With Period Date Records
 
+After the A/P related options are designated for each company, the periods (also referred to as months) of the user’s fiscal year are defined for each company.
+
+The instructions below must be followed to define the next fiscal year prior to closing the current year. Refer to Closing A Year for additional information.
+
+The instructions below may also be followed to ensure that the correct period is closed before using the Month End Close application. Refer to Closing A Month for additional information.
+
+1. Select option 12 (Period Dates) from the A/P File Maintenance screen. The Period Date Maintenance screen appears.
+
+2. Enter the last two digits of the desired fiscal year for the Period year (2,n) field.
+
+3. Press \<Enter>. The Period Date Maintenance (Add) screen appears if period dates 
+have not yet been defined.\
+The Period Date Maintenance (Change) screen appears for users to review previously defined period dates, and to ensure that the correct period is closed before pressing \<F3> to exit, and using the Month End Close application.
+
+4. Enter data for the following fields. Note: If the user defines a month as a fourweek period, a value must be entered for all 13 Period...end date fields.
+    - Period 1 start date (6,n) - the date of the first day of the fiscal year’s first month.
+    - Period 1 end date (6,n) - the date of the last day of the fiscal year’s first month.
+    - Period 2 end date (6,n) - the date of the last day of the fiscal year’s second month.
+    - Period 3 end date (6,n) - the date of the last day of the fiscal year’s third month.
+    - Period 4 end date (6,n) - the date of the last day of the fiscal year’s fourth month.
+    - Period 5 end date (6,n) - the date of the last day of the fiscal year’s fifth month.
+    - Period 6 end date (6,n) - the date of the last day of the fiscal year’s sixth month.
+    - eriod 7 end date (6,n) - the date of the last day of the fiscal year’s seventh month.
+    - Period 8 end date (6,n) - the date of the last day of the fiscal year’s eighth month.
+    - Period 9 end date (6,n) - the date of the last day of the fiscal year’s ninth month.
+    - Period 10 end date (6,n) - the date of the last day of the fiscal year’s tenth month.
+    - Period 11 end date (6,n) - the date of the last day of the fiscal year’s eleventh month.
+    - Period 12 end date (6,n) - the date of the last day of the fiscal year’s twelfth month.
+    - Optional: Period 13 end date (6,n) - the date of the last day of the fiscal year’s last “month” is entered if the user defines a month as a four-week period.
+
+5. Press \<Enter> when data entry is complete.
+
+6. Enter Y (yes) for the Confirm (1,a) field. The Period Date Maintenance (Enter) screen appears.
+
+7. Press \<F3> to exit. The A/P File Maintenance screen appears.
+
 ### Working With Bank Records
+
+After executing the Company A/P One Time Maintenance application (under the direction of CDR support personnel), the bank records are added. Refer to [Working With Accounts Payable Reports](#working-with-accounts-payable-reports) for information about printing a list of banks.
+
+1. Select option 2 (Bank) from the A/P File Maintenance screen. The Bank Maintenance (Change) screen appears.
+
+2. If necessary, enter *?* for the Bank code field and press \<Enter> to display a list of 
+the previously added bank records on the Bank Selection screen.
+
+If desired, 1 (Select request) can be entered in the selection column to display, edit or delete a bank record, or the user can press \<F3> to redisplay the Bank Maintenance screen.
+
+3. If necessary, press \<F9> (Go to 'Add' mode) to display the Bank Maintenance (Add) screen.
+
+4. To add a new bank record, enter a bank code for the Bank code (6,a) field.
+
+5. Press \<Enter>.
+Note: The Cost Center and G/L Account # field names will be different if other values are entered for the Cost cntr hdr and Account header fields of the Company Maintenance (G/L) screen. Refer to [Working With Company G/L Options](#working-with-company-gl-options) for additional information.
+
+6. Enter data for the following fields:
+    - Optional: Bank name (30,a) - the name of the bank.
+    - Optional: Bank account (20,a) - the bank account number.
+    - Bank Type (30,a) - the type, such as Checking or Payroll, of bank account.
+    - Optional: Forms code (6,a) - the text designating the forms used to print checks.
+
+7. If the chart of account records created using the DAC General Ledger System are used, enter data for the following fields under the G/L cash account heading:
+    - Cost Center - the cost center number (3+4,n) which is used (with the account number described below) to designate the asset account number which is credited when payments are made.
+    - G/L Account # - the account number (5+4,n) which is used (with the cost center number described above) to designate the asset account number which is credited when payments are made.
+
+    Refer to [Printing Checks And Check Register](#printing-checks-and-check-register) for additional information.
+
+8. Press \<Enter> when data entry is complete. The Record added message appears at 
+the bottom of the Bank Maintenance screen.
+
+9. Press \<F3> to exit. The A/P File Maintenance screen appears.
 
 ### Working With Terms Records
 
+The instructions below must be followed to designate the payment terms for use with A/P vendor records. These payment terms records must include duplicate records corresponding to the payment terms records added for use with the Purchasing System’s vendor records. Refer to Working With Terms Definitions of the Customer File Maintenance document for information about adding the vendor payment terms for use with the Purchasing System.
+
+Refer to the DAC Default System Options document for information about the **A/P Terms Positions Used** field of the SYS005 default system option (Accounting Options).
+
+1. Select option 5 (Terms) from the A/P File Maintenance screen. The Vendor Terms Maintenance screen appears without values for any of the fields if no terms records have been previously added using Accounts Payable. If necessary, press \<F9> (Go to 'Add' mode).
+
+2. Enter data for the following fields as necessary:
+    - Terms code (2,a) - a 2-digit code to designate the type of the payment terms, such as 20 for net due in 20 days. The value entered for this field must duplicate the value entered for the Terms Code field of the corresponding record added for the Purchasing System’s vendor records.
+    - Terms code Description (25,a) - a description of the payment terms. The value entered for this field should duplicate the value entered for the Terms Code Description field of the corresponding record added with the Terms Definitions application.
+    - Optional: Pmt due days (3,n) - the number of days in which payment must be received by the vendor before an invoice is considered past due. This value is added to the vendor’s invoice date to calculate the payment due date. If a value is not entered for this field, a value must be entered for the Pmt due dte field (see below).
+The value entered for the Pmt due days field should duplicate the value 
+entered for the Age Days field of the corresponding record added for the 
+Purchasing System’s vendor records.
+• Optional: Disc due days (3,n) - the number of days in which payment must be 
+received by the vendor before the distributor qualifies for a cash discount. This 
+value is added to the vendor’s invoice date to calculate the discount due date. 
+Refer to Working With A/P Options for information about using the Take 
+A/P Disc If Past Due Date field to pay discounted payment amounts when 
+invoices are past due.
+To designate the discount due date as a specific day of each month, do not 
+enter a value for the Disc due days field, and enter a value for the Disc due 
+dte field (see below).
+The value entered for the Disc due days field should duplicate the value 
+entered for the Disc Days field of the corresponding record added for the 
+Purchasing System’s vendor records.
+• Optional: Terms discount percent (5.2,n) - the discount percentage received 
+from the vendor is used to calculate the discounted payment amount by 
+multiplying the percentage by the amount due for only the items of vendor’s 
+invoice which can be discounted. Refer to Working With A/P Item Records for 
+information about the Discount Allowed field.
+The value entered for the Terms discount percent field should duplicate the 
+value entered for the Cash Disc. % field of the corresponding record added 
+for the Purchasing System’s vendor records.
+• Optional: Pmt due dte (4,n) - the payment due date designated as a specific 
+day of each month. The valid values are 9901 through 9931 (for the 1st 
+through the 31st). Note: The 99 digits of these values are not related in any 
+way to the year 1999.
+If a value is not entered for the Pmt due dte field, a value must be entered for 
+the Pmt due days field (see above).
+Accounts Payable (Rev. 7/09/13) 39
+• Optional: Disc due dte (4,n) - the discount due date designated as a specific 
+day of each month. The valid values are 9901 through 9931 (for the 1st 
+through the 31st). Note: The 99 digits of these values are not related in any 
+way to the year 1999.
+To calculate the discount due date using a specific number of days, do not 
+enter a value for the Disc due dte field, and enter a value for the Disc due 
+days field (see above).
+• Optional: EFT Sts (1,a) - enter Y (yes) to designate that the default value of an 
+invoice’s payment type is E for electronic file transfer (EFT) payment.
+3. Press <Enter> when data entry is complete.
+4. Press <F3> to exit. The A/P File Maintenance screen appears.
+After the payment terms records are created, they are linked to vendor records 
+by entering the value of the Terms code field of a terms record for the value of a 
+A/P vendor record’s Terms code field. Refer to Working With Vendor Records for 
+additional information.
 ### Working With Vendor Records
 
 #### Vendor Record Worksheet
