@@ -16,7 +16,7 @@ We realized that to get the overall experience right we needed to start from scr
 
 Let's start with an example documentation page shown below and we'll showcase some of the new features on the site. ![Dacumentation](./images/DACumentation.png)
 
-## Readabliity
+## Readablity
 
 To improve content readability, we changed the site to have a set content width. Eye tracking studies have shown that you can improve comprehension and reading speed with a set content width as it's difficult for the eye to follow long passages left-to-right. We've also increased the font size for the left navigation and the text itself, something customers have been asking for.
 
