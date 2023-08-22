@@ -118,7 +118,7 @@ When payments are processed, a single credit journal entry is created in G/L (fo
 Refer to [Working With Company A/P Options](#working-with-ap-options) for information about the:
 
 - **Pmt jrnl entry method** field which is used to designate if a single debit journal entry is created for each payment of a batch, or for the entire batch when printing checks.
-        >Note: A single debit journal entry is created for each manual check and each EFT processed.
+    >Note: A single debit journal entry is created for each manual check and each EFT processed.
 
 - Dates used for debit and credit journal entries when processing payments.
 
@@ -242,9 +242,11 @@ If necessary, the Select Alternative Company application can be used before work
     - Optional: **A/P aging bucket 3 name** - a description of the third aging bucket, such as 61 to 90.
     - Optional: **A/P aging bucket 3 days** - the number of days which an invoice cannot exceed to be included in the third bucket.
     - Optional: **A/P aging bucket 4 name** - a description of the fourth aging bucket, such as 91 - 120.
-    - Optional: **A/P aging bucket 4 days** - the number of days which an invoice cannot exceed to be included in the fourth bucket. Note: When using the Vendor Account Inquiry application to display four columns of aging figures, the amount calculate for the fourth bucket is combined with the fifth bucket, and displayed in the far right column of the screen.
+    - Optional: **A/P aging bucket 4 days** - the number of days which an invoice cannot exceed to be included in the fourth bucket. 
+        > Note: When using the Vendor Account Inquiry application to display four columns of aging figures, the amount calculate for the fourth bucket is combined with the fifth bucket, and displayed in the far right column of the screen.
     - Optional: **A/P aging bucket 5 name** - a description of the fifth aging bucket, such as 121+.
-    - Optional: **A/P aging bucket 5 days** - enter 999 for the number of days which an invoice cannot exceed to be included in the fifth bucket. Note: When using the Vendor Account Inquiry application to display four columns of aging figures, the amount calculate for the fifth bucket is combined with the fourth bucket, and displayed in the far right column of the screen.
+    - Optional: **A/P aging bucket 5 days** - enter 999 for the number of days which an invoice cannot exceed to be included in the fifth bucket.
+        >Note: When using the Vendor Account Inquiry application to display four columns of aging figures, the amount calculate for the fifth bucket is combined with the fourth bucket, and displayed in the far right column of the screen.
 The values of the A/P aging fields are used to produce the A/P cash forecast report (entitled Vendor Aging Summary), and used to calculate the aging figures which appear on the Vendor Account Inquiry (Display) screen.
 7. Enter Y (yes) for the **Allow discount override** field to enable the user to changethe values of the **Discount** and fields of the A/P Invoice Posting (Add) and (Change) screens, and the **Discount** field of the Payment Detail Maintenance screen. Refer to Adding An Invoice Batch, Adding A Payment Batch, Working With Manual Payments, and Working With EFT Payments for additional information.
 8. Enter Y (yes) for the **Allow detail payment change** field to enable changing the amount of a payment when selecting invoices for payment.
@@ -314,7 +316,9 @@ The instructions below may also be followed to ensure that the correct period is
 3. Press \<Enter>. The Period Date Maintenance (Add) screen appears if period dates have not yet been defined.\
 The Period Date Maintenance (Change) screen appears for users to review previously defined period dates, and to ensure that the correct period is closed before pressing \<F3> to exit, and using the Month End Close application.
 
-4. Enter data for the following fields. Note: If the user defines a month as a fourweek period, a value must be entered for all 13 Period...end date fields.
+4. Enter data for the following fields.
+If the user defines a month as a four week period, a value must be entered for all 13 Period...end date fields.
+
     - Period 1 start date (6,n) - the date of the first day of the fiscal year’s first month.
     - Period 1 end date (6,n) - the date of the last day of the fiscal year’s first month.
     - Period 2 end date (6,n) - the date of the last day of the fiscal year’s second month.
@@ -485,6 +489,7 @@ The instructions given below, which describe adding and deleting a vendor record
 10. Press \<F3> to exit. The Vendor Maintenance screen appears.
 
 #### Vendor Record Worksheet
+
 **Vendor Maintenance KEY SCREEN and Vendor Maintenance screens**
 
 **Vendor***(6,a) _____________________
@@ -499,7 +504,7 @@ Address line 2*(30,a) ______________________
 
 **Postal code***(5-9,n) ______________________
 
-Phone number*(10,n) ______________________ 
+Phone number*(10,n) ______________________
 
 Fax number*(10,n) ______________________
 
@@ -591,7 +596,7 @@ Refer to the DAC Default System Options document for information about the A/P r
 
 1. Select option 16 (A/P Options) from the A/P File Maintenance screen. The Work With A/P Options screen appears.  
 
-2. Enter  2 (Edit Record) in the selection column next to AP0001 (General A/P Options 1), and press \<Enter>. The General A/P Options Details screen appears.
+2. Enter  2 (Edit Record) in the selection column next to *AP0001* (General A/P Options 1), and press \<Enter>. The General A/P Options Details screen appears.
 
 3. Enter a company code for the **Default Company Number** (3,a) field. The default company code is used if purchase orders are transferred to A/P. Refer to Transferring Purchase Orders to Accounts Payable of the Purchasing document for additional information. The default company code is also used if vendor records are copied from Purchasing. Refer to Working With Vendor Records for additional information.  
 
@@ -616,154 +621,59 @@ Refer to the DAC Default System Options document for information about the A/P r
     - 1 - discounted payment amounts are not paid to vendors when invoices are past due.
     - 2 - discounted payment amounts are paid to vendors when invoices are past due. Refer to Working With Terms Records for information about the **Terms discount percent** field.
 
-8. Enter one of the following values for the **A/P Check Date** (2,a) field. With the exception described in the note below, the value of the A/P Check Date field designates 1) which date is used for posting entries to the General Ledger, 2) which date is printed on checks, and 3) how many checks are printed per vendor:
+8. Enter one of the following values for the **A/P Check Date** (2,a) field. With the exception described in the note below, the value of the **A/P Check Date** field designates 1) which date is used for posting entries to the General Ledger, 2) which date is printed on checks, and 3) how many checks are printed per vendor:
 
-    - *BP*- the value entered for the Check date field when printing checks is used for posting payments to the payment journal, and is printed on checks. Refer to Printing Checks And Check Register for information about the Check date field of the A/P Check Print Prompt screen.
+    - *BP*- the value entered for the **Check date** field when printing checks is used for posting payments to the payment journal, and is printed on checks. Refer to Printing Checks And Check Register for information about the **Check date** field of the A/P Check Print Prompt screen.
 
         If *BP* is entered for the **A/P Check Date** field, the default value of the **A/P Check Version** field on the A/P Check Print Prompt screen is 1 which designates that one check is printed per vendor. Refer to [Printing Checks And Check Register](#printing-checks-and-check-register) for information about the **A/P Check Version** field.
 
-        When printing checks, users can change the default value of the **A/P Check Version** field to 2 which designates that one check is printed for each voucher of each vendor. Note: If 2 is entered for the **A/P Check Version** field, multiple reference lines cannot be printed on a check stub. Refer to [Printing Multiple Reference Lines](#printing-multiple-refrence-lines) for additional information.
+        When printing checks, users can change the default value of the **A/P Check Version** field to 2 which designates that one check is printed for each voucher of each vendor.
+        >Note: If 2 is entered for the **A/P Check Version** field, multiple reference lines cannot be printed on a check stub. Refer to [Printing Multiple Reference Lines](#printing-multiple-refrence-lines) for additional information.
 
-    - *PD* - the value of the **Pay Date** field is used for posting payments to the payment journal, and is printed on checks. Refer to [Adding A Payment Batch](#adding-a-payment-batch) for information about the Pay Date field of the A/P Payment Selection screen. Refer also to [Adding An Invoice Batch](#adding-an-invoice-batch) for information about the **Pay date** field of the A/P Invoice Posting (Add) screen.
+    - *PD* - the value of the **Pay Date** field is used for posting payments to the payment journal, and is printed on checks. Refer to [Adding A Payment Batch](#adding-a-payment-batch) for information about the **Pay Date** field of the A/P Payment Selection screen. Refer also to [Adding An Invoice Batch](#adding-an-invoice-batch) for information about the **Pay date** field of the A/P Invoice Posting (Add) screen.
 
         If PD is entered for the **A/P Check Date** field, the default value of the **A/P Check Version** field is 3 on the A/P Check Print Prompt screen which designates that one check will be printed per vendor per pay date. Refer to [Printing Checks And Check Register](#printing-checks-and-check-register) for information about the **A/P Check Version** field.  
 
     > Note: The value of the **Pay Date** field is used for posting payments to the payment journal, regardless of the value entered for the **A/P Check Date** field, when payments are made with either hand-written checks or electronic funds transfers (EFTs). Refer to Working With Manual Payments and Working With EFT Payments for information about the Check date and Selection Date fields, respectively.
 
-9. If using General Ledger custom reports, 22 can be entered for the G/L Custom Report Heading (2,a) field to print one or two additional lines of text with the report headings. Refer to Working With G/L Report Records of the General Ledger document for information about using the 1 and 2 fields of the G/L Report
-Maintenance screen when defining a custom report. If the G/L Custom Report Heading field is left blank, or 11 is entered, the report heading will include the company name, but not the additional text.  
+9. If using General Ledger custom reports, 22 can be entered for the **G/L Custom Report Heading** (2,a) field to print one or two additional lines of text with the report headings. Refer to Working With G/L Report Records of the General Ledger document for information about using the **1** and **2** fields of the G/L ReportMaintenance screen when defining a custom report. If the **G/L Custom Report Heading** field is left blank, or 11 is entered, the report heading will include the company name, but not the additional text.  
 
-10. Enter  *YES for the Restrict AP Batch To User (6,a) field if purchase orders are transferred to Accounts Payable. A DAC/CV1 Object Lock message appears if others are using Accounts Payable at the time a user attempts to transfer purchase orders. Refer to Transferring Purchase Orders to Accounts Payable of the
-Purchasing document for additional information.
+10. Enter  ***YES** for the **Restrict AP Batch To User** (6,a) field if purchase orders are transferred to Accounts Payable. A DAC/CV1 Object Lock message appears if others are using Accounts Payable at the time a user attempts to transfer purchase orders. Refer to Transferring Purchase Orders to Accounts Payable of the Purchasing document for additional information.
 
 11. If multiple cost centers exist, enter a cost center number for the Default Cost
 Center (3,n) field. Contact CDR support personnel for additional information.
 
 12. Enter  *YES for the Condensed Written Chk V3 (6,a) field if PD is entered for the A/P Check Date field above, and additional space is needed to print the written amount on checks.
 
-13. Enter the device name of the user’s tape drive for the Device Name (EOY Backup) (30,a) field. The data files of the DACACTDATA library are automatically saved to a tape cartridge during General Ledger end of year processing.
+13. Enter the device name of the user’s tape drive for the **Device Name (EOY Backup)** (30,a) field. The data files of the DACACTDATA library are automatically saved to a tape cartridge during General Ledger end of year processing.
 
 14. Press \<Enter> when data entry is complete.
 
 15. Press \<Enter> when prompted to confirm. The Work With A/P Options screen appears.  
 
-16. Enter  2 (Edit Record) in the selection column next to AP0002 (A/P System Options 1), and press \<Enter>. The General A/P Options Details screen appears.
+16. Enter 2 (Edit Record) in the selection column next to *AP0002* (A/P System Options 1), and press \<Enter>. The General A/P Options Details screen appears.
 
-17.  Enter  YES for the A/P Auto Tape Recon (3,a) field if monthly reconciliation 
-with the bank is handled electronically. Contact CDR personnel for additional 
-information.
-SYW5E1R    CHANGE  CDR Customer Conference                   4/30/12 16:25:29
-                               General A/P Options Details                   
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-        A/P Auto Tape Recon.           ___                                   
-        Print A/P Remittance Rpt       __                                    
-        Use Alt. A/P Check Ver. 1      ______                                
-        GL Act# on AP Chk Reg-Y/N      _                                     
-        A/P Laser Check?(No/1/2)       _                                     
-        Use GL hdr desc 2 for dtl      _                                     
-                                             
-        Print Invoice Entry Edit?      ______                                
-        Fiscal Year? (YES/NO)                                                
-        Allow Auto EFT & Man Chks      ______                                
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-F3=Exit                                                                      
-SYW4DFR    DISPLAY CDR Customer Conference                   4/30/12 15:30:37
-                                  Work with A/P Options                      
-A/P Option  Key Text                                                         
-Key                                                                          
-______      ______________________________                  
-Type option and press enter:  2=Edit Record                                  
-                                                                             
-?  A/P Options  Key Text                                                     
-   Key                                                                       
-_  AP0001       General A/P OPtions 1                                        
-_  AP0002       A/P System Options 1                                         
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-F3=Exit   F5=Impose A/P Options                                              
-SYW5E1R    CHANGE  CDR Customer Conference                   4/30/12 16:38:54 
-                               General A/P Options Details                    
-                                                                              
-                                                                              
-                                                                              
-                                                                              
-        Default Company Number         001                                    
-        Default Terms Code             10                                     
-        Default Bank Code              CHECK                                  
-        Default Pay Date From....      2                                      
-        Take Disc If Past Due Dte      2                                      
-        A/P Check Date (PD,BP)         BP                                     
-        G/L Custom Report Heading      11                                     
-        Restrict AP Batch To User      *YES                                   
-        Default Cost Center                                                   
-        Condensed Written Chk V3       *NO                                    
-        Device Name (EOY Backup)       TAP01                                     
-                                                                              
-                                                                              
-                                                                              
-                                                                              
-F3=Exit                                                                       
-                                                              CONFIRM: Y (Y/N)
-A c c o u n t s   P a y a b l e   ( R e v.   7 / 0 9 / 1 3 )                                                                                                         5 6   18.  Enter  Y for the Print A/P Remittance Rpt (1,a) field to print a remittance report, 
-similar to a check stub, for EFT payments.  19.  Enter  Y (yes) for the GL Act# on AP Chk Reg-Y/N (1,a) field to designate that 
-the account numbers which are debited in the General Ledger (when posting 
-invoices) are printed on the check register. Refer to Working With A/P Item 
-Records for information about the G/L Acct Number field which is used to 
-designate these account numbers. 20.  If A/P laser printer checks are used, enter one of the following values for the 
-A/P Laser Check?(No/1/2) (1,a) field to designate the type of printer used. If 
-the continous form check is used, enter N (no). Refer to the A/P Check Forms 
-document for additional information.
-•  1 - a printer with IPDS (intelligent printer data stream) capability is used for 
-printing the checks.
-•  2 - a printer without IPDS capability is used for printing the checks.  21.  Enter  Y (yes) for the Use GL hdr desc 2 for dtl (1,a) field to designate that text 
+17. Enter *YES* for the **A/P Auto Tape Recon** (3,a) field if monthly reconciliation with the bank is handled electronically. Contact CDR personnel for additional information.
+
+18. Enter  Y for the Print A/P Remittance Rpt (1,a) field to print a remittance report, similar to a check stub, for EFT payments.  
+19. Enter  Y (yes) for the GL Act# on AP Chk Reg-Y/N (1,a) field to designate that the account numbers which are debited in the General Ledger (when posting invoices) are printed on the check register. Refer to Working With A/P Item Records for information about the G/L Acct Number field which is used to designate these account numbers. 
+20. If A/P laser printer checks are used, enter one of the following values for the A/P Laser Check?(No/1/2) (1,a) field to designate the type of printer used. If the continous form check is used, enter N (no). Refer to the A/P Check Forms document for additional information.
+    - *1* a printer with IPDS (intelligent printer data stream) capability is used for printing the checks.
+    - *2* a printer without IPDS capability is used for printing the checks.  
+21.  Enter  Y (yes) for the Use GL hdr desc 2 for dtl (1,a) field to designate that text 
 entered for the Desc 2 field of the Journal Entry screen is printed as the journl 
 entry’s detail information; otherwise, the account name/description from the chart 
-of account is used.  22.  Enter  *YES for the Print Invoice Entry Edit (6,a) field to designate that the 
+of account is used.  
+22.  Enter  *YES for the Print Invoice Entry Edit (6,a) field to designate that the 
 Invoice Entry Edit List is automatically printed when an A/P invoice batch is 
-posted.  23.  Enter  *YES for the Allow Auto EFT & Man Chks (6,a) field to designate 
+posted.  
+23.  Enter  *YES for the Allow Auto EFT & Man Chks (6,a) field to designate 
 that EFT and manual check payments can be automatically posted when users 
 enter vendor invoices. Refer to Automatically Posting Manual Payments and 
-Automatically Posting EFT Payments for additional information. 24.  Press <Enter>.  25.  Press <Enter> when prompted to confirm. The Work With A/P Options  screen 
-appears.
-SYW5E1R    CHANGE  CDR Customer Conference                   5/01/12 16:24:59 
-                               General A/P Options Details                    
-                                                                              
-                                                                              
-                                                                              
-                                                                              
-        A/P Auto Tape Recon.           TC                                     
-        Print A/P Remittance Rpt                                              
-        Use Alt. A/P Check Ver. 1      *NO                                    
-        GL Act# on AP Chk Reg-Y/N      Y                                      
-        A/P Laser Check?(No/1/2)       1                                      
-        Use GL hdr desc 2 for dtl      N                                      
-                                                                              
-        Print Invoice Entry Edit?                                             
-        Fiscal Year? (YES/NO)                                                 
-        Allow Auto EFT & Man Chks      *YES                                   
-                                                                              
-                                                                              
-                                                                              
-                                                                              
-                                                                              
-F3=Exit                                                                       
+Automatically Posting EFT Payments for additional information. 
+24.  Press <Enter>.  
+25.  Press <Enter> when prompted to confirm. The Work With A/P Options  screen 
+appears.                                                                  
 
 ### Working With Recurring Invoice Records
 
