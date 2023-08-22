@@ -6,11 +6,12 @@ slug: /
 # Introducing docs.cdrsoftware.com
 
 ## Why docs.cdrsoftware.com?
-In short, content matters. We interviewed and surveyed hundreds of developers and IT Pros and sifted through your website feedback over the years on UserVoice. It was clear we needed to make a change and create a modern web experience for content. The first thing we did was evaluate our existing content infrastructure TechNet and MSDN. Both sites are built on a 10-15 year-old brittle codebase with an archaic publishing and deployment system that was never designed to run on the cloud.
+
+In short, content matters. We interviewed and surveyed hundreds of developers and IT Pros and sifted through your website feedback over the years on UserVoice. It was clear we needed to make a change and create a modern web experience for content. The first thing we did was evaluate our existing content infrastructure. The prevous site was built on a 10-15 year-old brittle codebase with an archaic publishing and deployment system that was never designed to run on the cloud.
 
 Our focus was not only on the experience, but also on the content we create and how each of you consume it. For years customers have told us to go beyond walls of text with feature-level content and help them implement solutions to their business problems. We knew that the content we delivered and the platform we built must make it easy for customers to learn and deploy solutions.
 
-We realized that to get the overall experience right we needed to start from scratch; from this effort comes https://docs.microsoft.com – a new hope for documentation at CDR.
+We realized that to get the overall experience right we needed to start from scratch; from this effort comes https://docs.cdrsoftware.com – a new hope for documentation at CDR.
 
 ## Key features
 
@@ -38,7 +39,7 @@ To build a great experience on mobile devices, tablets, and PCs, we switched to 
 
 ## Community feedback mechanisms
 
-Your questions, comments, and feedback are important to us. You are now able to provide comments and Sidenotes on all of our articles. 
+Your questions, comments, and feedback are important to us. You are now able to provide comments and Sidenotes on all of our articles.
 
 ## Friendly URLs
 
@@ -54,4 +55,3 @@ We also added a theme picker to articles so that you can change between a light 
 ![Alt text](images/darkmode.gif)
 
 ## We want your feedback!
-
