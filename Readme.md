@@ -7,3 +7,5 @@
 ## Grav
 
 looks like we can use this tool to quickly host documentation at docs.cdrsoftware.com
+
+these things are dumb < > use this instead ```&lt; &gt;```
