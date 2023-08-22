@@ -226,7 +226,7 @@ If necessary, the Select Alternative Company application can be used before work
 1. Select option 7 (Company) from the A/P File Maintenance screen. The Company Maintenance screen appears.
 2. Enter the company code of the desired company and press \<Enter>, or enter ? for the Company field and press \<Enter> to select a company from the Company Selection screen.
 3. Press \<F16> (\<Shift> plus \<F4>). The Company Maintenance (A/P) screen appears.
-4. Enter one of the following values for the A/P aging method field:\
+4. Enter one of the following values for the A/P aging method field:
   
      - I designates that A/P aging is based on the invoice date. For example, if an invoice is dated November 1 with 30-day terms, the invoice is considered 1 day past due on December 2.
      - D designates that A/P aging is based on the invoice due date. For example, if the due date is November 1 with 30-day terms, the invoice is considered 31 days past due on December 2.
@@ -311,8 +311,7 @@ The instructions below may also be followed to ensure that the correct period is
 
 2. Enter the last two digits of the desired fiscal year for the Period year (2,n) field.
 
-3. Press \<Enter>. The Period Date Maintenance (Add) screen appears if period dates 
-have not yet been defined.\
+3. Press \<Enter>. The Period Date Maintenance (Add) screen appears if period dates have not yet been defined.\
 The Period Date Maintenance (Change) screen appears for users to review previously defined period dates, and to ensure that the correct period is closed before pressing \<F3> to exit, and using the Month End Close application.
 
 4. Enter data for the following fields. Note: If the user defines a month as a fourweek period, a value must be entered for all 13 Period...end date fields.
@@ -343,8 +342,7 @@ After executing the Company A/P One Time Maintenance application (under the dire
 
 1. Select option 2 (Bank) from the A/P File Maintenance screen. The Bank Maintenance (Change) screen appears.
 
-2. If necessary, enter *?* for the Bank code field and press \<Enter> to display a list of 
-the previously added bank records on the Bank Selection screen.
+2. If necessary, enter *?* for the Bank code field and press \<Enter> to display a list of the previously added bank records on the Bank Selection screen.
 
 If desired, 1 (Select request) can be entered in the selection column to display, edit or delete a bank record, or the user can press \<F3> to redisplay the Bank Maintenance screen.
 
@@ -394,15 +392,15 @@ Refer to the DAC Default System Options document for information about the **A/P
 
     - Optional: Terms discount percent (5.2,n) - the discount percentage received from the vendor is used to calculate the discounted payment amount by multiplying the percentage by the amount due for only the items of vendor’s invoice which can be discounted. Refer to Working With A/P Item Records for information about the Discount Allowed field.
 
-        The value entered for the Terms discount percent field should duplicate the value entered for the Cash Disc. % field of the corresponding record added for the Purchasing System’s vendor records.
+        The value entered for the Terms discount percent field should duplicate the value entered for the **Cash Disc. %** field of the corresponding record added for the Purchasing System’s vendor records.
 
     - Optional: Pmt due dte (4,n) - the payment due date designated as a specific day of each month. The valid values are 9901 through 9931 (for the 1st through the 31st). Note: The 99 digits of these values are not related in any way to the year 1999.
 
         If a value is not entered for the **Pmt due dte** field, a value must be entered for the **Pmt due days** field (see above).
 
-    - Optional: Disc due dte (4,n) - the discount due date designated as a specific day of each month. The valid values are 9901 through 9931 (for the 1st through the 31st). Note: The 99 digits of these values are not related in any way to the year 1999.
+    - Optional: **Disc due dte** (4,n) - the discount due date designated as a specific day of each month. The valid values are 9901 through 9931 (for the 1st through the 31st). Note: The 99 digits of these values are not related in any way to the year 1999.
 
-        To calculate the discount due date using a specific number of days, do not enter a value for the Disc due dte field, and enter a value for the Disc due days field (see above).
+        To calculate the discount due date using a specific number of days, do not enter a value for the **Disc due dte** field, and enter a value for the Disc due days field (see above).
 
     - Optional: EFT Sts (1,a) - enter Y (yes) to designate that the default value of an invoice’s payment type is E for electronic file transfer (EFT) payment.
 
@@ -472,11 +470,11 @@ The instructions given below, which describe adding and deleting a vendor record
 
     - Optional:  **Tax ID** (11,a) - the vendor’s federal tax identification number which appears on the Vendor 1099 Report. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
 
-    - **Allow payment** (1,a) - the default value of Y (yes) designates that the vendor’s invoices are not withheld when select invoices for payment. Refer to Editing A Payment Batch for additional information. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
+    - **Allow payment** (1,a) - the default value of Y (yes) designates that the vendor’s invoices are not withheld when select invoices for payment. Refer to [Editing A Payment Batch](#editing-a-payment-batch) for additional information. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
 
     - **Critical payment** (1,a) - the default value of N (no) designates that payments to the vendor need not be made in a timely manner. Enter Y (yes) to designate otherwise. This field is not required for using DAC directly, but provided for the informational purposes of the user. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
 
-    - Optional:  **Minimum order value** (11.2,n) - designates the minimum dollar value which must be purchased from the vendor. This field is not required for using DAC directly, but provided for the informational purposes of the user. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary. 
+    - Optional:  **Minimum order value** (11.2,n) - designates the minimum dollar value which must be purchased from the vendor. This field is not required for using DAC directly, but provided for the informational purposes of the user. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
     > Note: If a value is entered for the **Minimum order value** field, a higher value must be entered for the **Maximum order value field** (see below).
 
     - Optional: **Maximum order value** (11.2,n) - designates the maximum dollar value which can be purchased from the vendor. This field is not required for using DAC directly, but provided for the informational purposes of the user. If the vendor record was copied from the Purchasing System’s vendor record, no value appears for this field, and must be entered by the A/P user if necessary.
@@ -558,12 +556,12 @@ Refer to [Working With Accounts Payable Reports](#working-with-accounts-payable-
 
 3. Enter an item code for the **Item code** (15,a) field. To add an A/P item record for each of the G/L accounts that will be debited during invoice posting, users may enter the chart of account numbers for the **Item code** field. For example, if 890 is the G/L account number for bank charges, 890 would be entered for the **Item code** field of the corresponding A/P item record.
 
-    To add an A/P item record for transferring purchase orders to Accounts Payable, enter INVENTORY and an item category number for the Item code field. Valid values are INVENTORY01 through INVENTORY99.
-    >Note: Though an A/P item record should be added for every item category number used by the distributor, a single A/P item record can be added by using the value of INVENTORY without a category number for the Item code field.
+    To add an A/P item record for transferring purchase orders to Accounts Payable, enter INVENTORY and an item category number for the **Item code** field. Valid values are INVENTORY01 through INVENTORY99.
+    >Note: Though an A/P item record should be added for every item category number used by the distributor, a single A/P item record can be added by using the value of INVENTORY without a category number for the **Item code** field.
 
-    To use any PO off invoice deduction (5) type of vendor deal, enter VRDEAL5 for the Item code field. To use any item allow-OI deduction (4) type of vendor deal, enter VRDEAL4 for the Item code field. Refer to Adding PO Off Invoice Deduction Deals and Adding Item Allow-OI Deduction Deals of the Vendor Receivables document for additional information.  
+    To use any PO off invoice deduction (5) type of vendor deal, enter VRDEAL5 for the **Item code** field. To use any item allow-OI deduction (4) type of vendor deal, enter VRDEAL4 for the **Item Code** field. Refer to Adding PO Off Invoice Deduction Deals and Adding Item Allow-OI Deduction Deals of the Vendor Receivables document for additional information.  
 
-    The value of the Item code field is also used to designate a tobacco product when printing the Tobacco Invoice Report. Refer to Working With Accounts Payable Reports for additional information.  
+    The value of the **Item code** field is also used to designate a tobacco product when printing the Tobacco Invoice Report. Refer to Working With Accounts Payable Reports for additional information.  
 
     Refer to Printing An Accounts Payable Item List to review examples of A/P item records.
 
@@ -599,12 +597,11 @@ Refer to the DAC Default System Options document for information about the A/P r
 
     If necessary, press \<F4> to select a default company code from the Company Selection screen. If \<F4> is used, enter N (no) for the Confirm field of the General A/P Options Details screen to continue entering values.
 
-4. Enter a terms code for the **Default Terms Code** (2,a) field. The default terms code is used if no payment terms is available for a vendor’s invoice when purchase orders are transferred to A/P. Refer to Transferring Purchase Orders to Accounts Payable of the Purchasing document for additional information. The default terms code is also used if vendor records are copied from Purchasing. Refer to Working 
-With Vendor Records for additional information.
+4. Enter a terms code for the **Default Terms Code** (2,a) field. The default terms code is used if no payment terms is available for a vendor’s invoice when purchase orders are transferred to A/P. Refer to Transferring Purchase Orders to Accounts Payable of the Purchasing document for additional information. The default terms code is also used if vendor records are copied from Purchasing. Refer to [Working With Vendor Records](#working-with-vendor-records) for additional information.
 
 5. Enter a bank code for the **Default Bank Code** (6,a) field. The default bank code is used for processing payments, and is also used if vendor records are copied from Purchasing.
 
-6. Enter one of the following values for the Default Pay Date From (1,a) field to designate which date is used by default as an invoice’s pay date if the pay date is not entered when the invoice is created (or transferred from Purchasing):
+6. Enter one of the following values for the **Default Pay Date From** (1,a) field to designate which date is used by default as an invoice’s pay date if the pay date is not entered when the invoice is created (or transferred from Purchasing):
 
     - 1 - the invoice’s due date is used for the pay date.
     - 2 - if a discount date is calculated for the invoice, it is used for the pay date; otherwise the invoice’s due date is used for the pay date.
@@ -612,56 +609,47 @@ With Vendor Records for additional information.
         Refer to the following sections for additional information about the fields used to calculate the due date and discount date:
     - Working With Terms Records for information about **Pmt due days**, **Pmt due dte**, **Disc due days** and **Disc due dte** fields.
 
-    - Adding An Invoice Batch for information about the Inv date and Due date fields.
+    - Adding An Invoice Batch for information about the **Inv date** and **Due date** fields.
     - Transferring Purchase Orders to Accounts Payable of the Purchasing document for information about the Invoice Date, Due and Pay fields of the Prompt Header Information screen.
 
-7. Enter one of the following values for the Take Disc If Past Due Dte (1,a) field to designate if a discounted payment amount is paid to vendors:
+7. Enter one of the following values for the **Take Disc If Past Due Dte** (1,a) field to designate if a discounted payment amount is paid to vendors:
     - 1 - discounted payment amounts are not paid to vendors when invoices are past due.
-    - 2 - discounted payment amounts are paid to vendors when invoices are past due. Refer to Working With Terms Records for information about the Terms discount percent field.
+    - 2 - discounted payment amounts are paid to vendors when invoices are past due. Refer to Working With Terms Records for information about the **Terms discount percent** field.
 
-8. Enter one of the following values for the **A/P Check Date**(2,a) field. With the exception described in the note below, the value of the A/P Check Date field designates 1) which date is used for posting entries to the General Ledger, 2) which date is printed on checks, and 3) how many checks are printed per vendor:
+8. Enter one of the following values for the **A/P Check Date** (2,a) field. With the exception described in the note below, the value of the A/P Check Date field designates 1) which date is used for posting entries to the General Ledger, 2) which date is printed on checks, and 3) how many checks are printed per vendor:
 
-    - BP - the value entered for the Check date field when printing checks is used 
-for posting payments to the payment journal, and is printed on checks. Refer 
-to Printing Checks And Check Register for information about the Check date 
-field of the A/P Check Print Prompt screen. 
+    - *BP*- the value entered for the Check date field when printing checks is used for posting payments to the payment journal, and is printed on checks. Refer to Printing Checks And Check Register for information about the Check date field of the A/P Check Print Prompt screen.
 
-        If BP is entered for the A/P Check Date field, the default value of the A/P Check Version field on the A/P Check Print Prompt screen is 1 which designates that one check is printed per vendor. Refer to Printing Checks And Check Register for information about the A/P Check Version field. When printing checks, users can change the default value of the A/P Check Version field to 2 which designates that one check is printed for each voucher of each vendor. Note: If 2 is entered for the A/P Check Version field, multiple reference lines cannot be printed on a check stub. Refer to Printing Multiple 
-Reference Lines for additional information.
-•  PD - the value of the Pay Date field is used for posting payments to the 
-payment journal, and is printed on checks. Refer to Adding A Payment Batch 
-for information about the Pay Date field of the A/P Payment Selection screen. 
-Refer also to Adding An Invoice Batch for information about the Pay date 
-field of the A/P Invoice Posting (Add) screen. If PD is entered for the A/P Check Date field, the default value of the 
-A/P Check Version field is 3 on the A/P Check Print Prompt screen which 
-designates that one check will be printed per vendor per pay date. Refer to 
-A c c o u n t s   P a y a b l e   ( R e v.   7 / 0 9 / 1 3 )                                                                                                         5 4 
-Printing Checks And Check Register for information about the A/P Check 
-Version field.  Note: The value of the Pay Date field is used for posting payments to the 
-payment journal, regardless of the value entered for the A/P Check Date field, 
-when payments are made with either hand-written checks or electronic funds 
-transfers (EFTs). Refer to Working With Manual Payments and Working With 
-EFT Payments for information about the Check date and Selection Date fields, 
-respectively. 9.  If using General Ledger custom reports, 22 can be entered for the G/L Custom 
-Report Heading (2,a) field to print one or two additional lines of text with the 
-report headings. Refer to Working With G/L Report Records of the General 
-Ledger document for information about using the 1 and 2 fields of the G/L Report 
-Maintenance screen when defining a custom report. If the G/L Custom Report 
-Heading field is left blank, or 11 is entered, the report heading will include the 
-company name, but not the additional text.  10.  Enter  *YES for the Restrict AP Batch To User (6,a) field if purchase orders are 
-transferred to Accounts Payable. A DAC/CV1 Object Lock message appears if 
-others are using Accounts Payable at the time a user attempts to transfer purchase 
-orders. Refer to Transferring Purchase Orders to Accounts Payable of the 
-Purchasing document for additional information. 11.  If multiple cost centers exist, enter a cost center number for the Default Cost 
-Center (3,n) field. Contact CDR support personnel for additional information.  12.  Enter  *YES for the Condensed Written Chk V3 (6,a) field if PD is entered 
-for the A/P Check Date field above, and additional space is needed to print the 
-written amount on checks. 13.  Enter the device name of the user’s tape drive for the Device Name (EOY 
-Backup) (30,a) field. The data files of the DACACTDATA library are 
-automatically saved to a tape cartridge during General Ledger end of year 
-processing. 14.  Press <Enter> when data entry is complete.
-A c c o u n t s   P a y a b l e   ( R e v.   7 / 0 9 / 1 3 )                                                                                                         5 5   15.  Press <Enter> when prompted to confirm. The Work With A/P Options screen 
-appears.  16.  Enter  2 (Edit Record) in the selection column next to AP0002 (A/P System 
-Options 1), and press <Enter>. The General A/P Options Details screen appears.  17.  Enter  YES for the A/P Auto Tape Recon (3,a) field if monthly reconciliation 
+        If *BP* is entered for the **A/P Check Date** field, the default value of the **A/P Check Version** field on the A/P Check Print Prompt screen is 1 which designates that one check is printed per vendor. Refer to [Printing Checks And Check Register](#printing-checks-and-check-register) for information about the **A/P Check Version** field.
+
+        When printing checks, users can change the default value of the **A/P Check Version** field to 2 which designates that one check is printed for each voucher of each vendor. Note: If 2 is entered for the **A/P Check Version** field, multiple reference lines cannot be printed on a check stub. Refer to [Printing Multiple Reference Lines](#printing-multiple-refrence-lines) for additional information.
+
+    - *PD* - the value of the **Pay Date** field is used for posting payments to the payment journal, and is printed on checks. Refer to [Adding A Payment Batch](#adding-a-payment-batch) for information about the Pay Date field of the A/P Payment Selection screen. Refer also to [Adding An Invoice Batch](#adding-an-invoice-batch) for information about the **Pay date** field of the A/P Invoice Posting (Add) screen.
+
+        If PD is entered for the **A/P Check Date** field, the default value of the **A/P Check Version** field is 3 on the A/P Check Print Prompt screen which designates that one check will be printed per vendor per pay date. Refer to [Printing Checks And Check Register](#printing-checks-and-check-register) for information about the **A/P Check Version** field.  
+
+    > Note: The value of the **Pay Date** field is used for posting payments to the payment journal, regardless of the value entered for the **A/P Check Date** field, when payments are made with either hand-written checks or electronic funds transfers (EFTs). Refer to Working With Manual Payments and Working With EFT Payments for information about the Check date and Selection Date fields, respectively.
+
+9. If using General Ledger custom reports, 22 can be entered for the G/L Custom Report Heading (2,a) field to print one or two additional lines of text with the report headings. Refer to Working With G/L Report Records of the General Ledger document for information about using the 1 and 2 fields of the G/L Report
+Maintenance screen when defining a custom report. If the G/L Custom Report Heading field is left blank, or 11 is entered, the report heading will include the company name, but not the additional text.  
+
+10. Enter  *YES for the Restrict AP Batch To User (6,a) field if purchase orders are transferred to Accounts Payable. A DAC/CV1 Object Lock message appears if others are using Accounts Payable at the time a user attempts to transfer purchase orders. Refer to Transferring Purchase Orders to Accounts Payable of the
+Purchasing document for additional information.
+
+11. If multiple cost centers exist, enter a cost center number for the Default Cost
+Center (3,n) field. Contact CDR support personnel for additional information.
+
+12. Enter  *YES for the Condensed Written Chk V3 (6,a) field if PD is entered for the A/P Check Date field above, and additional space is needed to print the written amount on checks.
+
+13. Enter the device name of the user’s tape drive for the Device Name (EOY Backup) (30,a) field. The data files of the DACACTDATA library are automatically saved to a tape cartridge during General Ledger end of year processing.
+
+14. Press \<Enter> when data entry is complete.
+
+15. Press \<Enter> when prompted to confirm. The Work With A/P Options screen appears.  
+
+16. Enter  2 (Edit Record) in the selection column next to AP0002 (A/P System Options 1), and press \<Enter>. The General A/P Options Details screen appears.
+
+17.  Enter  YES for the A/P Auto Tape Recon (3,a) field if monthly reconciliation 
 with the bank is handled electronically. Contact CDR personnel for additional 
 information.
 SYW5E1R    CHANGE  CDR Customer Conference                   4/30/12 16:25:29
