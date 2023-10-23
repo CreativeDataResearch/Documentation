@@ -64,7 +64,7 @@ Refer to the [Accounts Payable Quick Reference Guide](/Quick%20Reference%20Guide
 
 ## Accounts Payable and General Ledger Account Numbers
 
-If the DAC General Ledger (G/L) System is used, credit and debit journal entries are created when invoice batches are posted and payments are processed.
+If the DAC [General Ledger](<General Ledger.md>) (G/L) System is used, credit and debit journal entries are created when invoice batches are posted and payments are processed.
 
 ### Posting invoice batches
 
@@ -122,7 +122,7 @@ Refer to [Working With Company A/P Options](#working-with-ap-options) for inform
 
 - Dates used for debit and credit journal entries when processing payments.
 
-# Working with Accounts Payable File Maintenance
+## Working with Accounts Payable File Maintenance
 
 The Accounts Payable File Maintenance applications are used to create:
 
