@@ -45,7 +45,7 @@ Your questions, comments, and feedback are important to us. You are now able to 
 
 We care about our web experience and one thing that regularly bugged us as users of documentation is that articles didn't have friendly, readable URLs or the ability to link to a section. Here's an example of the same article with our new URLs.
 
-Before: <https://cdrsoftware.com/blog/wp-content/uploads/2023/06/Accounts-Payable.pdf>
+Before: <https://fogsoftwaregroup.sharepoint.com/:b:/r/sites/CDRODrive/Documents/DAC%20Documentation/DAC%20USER%20GUIDE/Accounts%20Payable.pdf?csf=1&web=1&e=9axhYh>
 
 After: <https://docs.cdrsoftware.com/User%20Guide/Accounts%20Payable#adding-a-payment-batch>
 
